@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BW8bgh1R3fPohi3Ksac5H0bkNC1JwS8NVe3R9hO2zN0=",
+  "Hash": "TGiZOM/yAsCaAo65ySfhJQ8bMk7sTq7tDk2Eqev92tk=",
   "Source": "Eventopia",
   "BasePath": "_content/Eventopia",
   "Mode": "Default",
@@ -1193,12 +1193,12 @@
       "OriginalItemSpec": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/lib/jquery/LICENSE.txt"
     },
     {
-      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/w4ges9dtxa-lugek5hnai.gz",
+      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/w4ges9dtxa-0rnljtgw45.gz",
       "SourceId": "Eventopia",
       "SourceType": "Discovered",
       "ContentRoot": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Eventopia",
-      "RelativePath": "css/site#[.{fingerprint=lugek5hnai}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=0rnljtgw45}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1207,8 +1207,8 @@
       "RelatedAsset": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/css/site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "lb0jssabxu",
-      "Integrity": "n4te0btuR7bRk4mRh2N5HuBqCrDu5bjitpFCR/Qw63g=",
+      "Fingerprint": "gn71wxarfd",
+      "Integrity": "/IC+tps5dUxE9xK2NGy482R1PWUIKOyYcdc1E+wcFAs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/css/site.css"
@@ -1417,8 +1417,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lugek5hnai",
-      "Integrity": "zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo=",
+      "Fingerprint": "0rnljtgw45",
+      "Integrity": "hA3UU6kVaxy1++YIHXVUMgNPs6UvyOTDKvbZ3ALFJUU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
@@ -1443,6 +1443,174 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/concert.webp",
+      "SourceId": "Eventopia",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/",
+      "BasePath": "_content/Eventopia",
+      "RelativePath": "Images/concert#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "35hkrl0gab",
+      "Integrity": "xwJsPz2pYaMdxmMJC6c4xEKSkn8xOGpcEztPjKXBedg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/concert.webp"
+    },
+    {
+      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image1.webp",
+      "SourceId": "Eventopia",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/",
+      "BasePath": "_content/Eventopia",
+      "RelativePath": "Images/image1#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1zyl7c02mz",
+      "Integrity": "TTtRvT4ored20dqXyNSd++wDDpiSUUEbYyS/QbEiUtA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/image1.webp"
+    },
+    {
+      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image2.jpeg",
+      "SourceId": "Eventopia",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/",
+      "BasePath": "_content/Eventopia",
+      "RelativePath": "Images/image2#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xahia6nhvk",
+      "Integrity": "GfrYvV+i1T0cLiiynmy8Y0T2LXTL6aHMh70cJcKi9IY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/image2.jpeg"
+    },
+    {
+      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image3.jpg",
+      "SourceId": "Eventopia",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/",
+      "BasePath": "_content/Eventopia",
+      "RelativePath": "Images/image3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "exmng4u8fj",
+      "Integrity": "LqwJZp/EqPa2pIxmvhp5jVZvtqWfs4hbSDVDLGdoAgM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/image3.jpg"
+    },
+    {
+      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image4.webp",
+      "SourceId": "Eventopia",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/",
+      "BasePath": "_content/Eventopia",
+      "RelativePath": "Images/image4#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ym0fuydjif",
+      "Integrity": "+uZlazQSRuoQDU1lCvrVfV/HBXDL7GPN4PUkmaSGNSI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/image4.webp"
+    },
+    {
+      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/soccer.webp",
+      "SourceId": "Eventopia",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/",
+      "BasePath": "_content/Eventopia",
+      "RelativePath": "Images/soccer#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "90pyph5w4g",
+      "Integrity": "GaDFBviqVPQ2JwIDv/puZ/apV0RJsMtdij2RjXfMmnc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/soccer.webp"
+    },
+    {
+      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/tech.jpg",
+      "SourceId": "Eventopia",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/",
+      "BasePath": "_content/Eventopia",
+      "RelativePath": "Images/tech#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "px4uxcwumn",
+      "Integrity": "fWWSUDBcJ7wlNnJeWqWQWqt16kH0pFnZ78RBKqcCipg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/tech.jpg"
+    },
+    {
+      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/user.png",
+      "SourceId": "Eventopia",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/",
+      "BasePath": "_content/Eventopia",
+      "RelativePath": "Images/user#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "78lu5u9n5c",
+      "Integrity": "93NpKLMzJZFUsZAzUGXGo6qECwQJeZ817mIywug+R2Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/user.png"
     },
     {
       "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/js/site.js",
@@ -2728,13 +2896,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.css",
-      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/w4ges9dtxa-lugek5hnai.gz",
+      "Route": "css/site.0rnljtgw45.css",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/w4ges9dtxa-0rnljtgw45.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003194888179"
+          "Quality": "0.001569858713"
         }
       ],
       "ResponseHeaders": [
@@ -2744,19 +2912,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "312"
+          "Value": "636"
         },
         {
           "Name": "ETag",
-          "Value": "\"n4te0btuR7bRk4mRh2N5HuBqCrDu5bjitpFCR/Qw63g=\""
+          "Value": "\"/IC+tps5dUxE9xK2NGy482R1PWUIKOyYcdc1E+wcFAs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Feb 2025 14:30:19 GMT"
+          "Value": "Sat, 08 Mar 2025 00:14:33 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -2772,18 +2940,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo=\""
+          "Value": "W/\"hA3UU6kVaxy1++YIHXVUMgNPs6UvyOTDKvbZ3ALFJUU=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "0rnljtgw45"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo="
+          "Value": "sha256-hA3UU6kVaxy1++YIHXVUMgNPs6UvyOTDKvbZ3ALFJUU="
         }
       ]
     },
     {
-      "Route": "css/site.css",
+      "Route": "css/site.0rnljtgw45.css",
       "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2793,7 +2969,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "637"
+          "Value": "1541"
         },
         {
           "Name": "Content-Type",
@@ -2801,121 +2977,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo=\""
+          "Value": "\"hA3UU6kVaxy1++YIHXVUMgNPs6UvyOTDKvbZ3ALFJUU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Feb 2025 14:30:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/w4ges9dtxa-lugek5hnai.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "312"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"n4te0btuR7bRk4mRh2N5HuBqCrDu5bjitpFCR/Qw63g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Feb 2025 14:30:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-n4te0btuR7bRk4mRh2N5HuBqCrDu5bjitpFCR/Qw63g="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.lugek5hnai.css",
-      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/w4ges9dtxa-lugek5hnai.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003194888179"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "312"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"n4te0btuR7bRk4mRh2N5HuBqCrDu5bjitpFCR/Qw63g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Feb 2025 14:30:19 GMT"
+          "Value": "Sat, 08 Mar 2025 00:14:33 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lugek5hnai"
+          "Value": "0rnljtgw45"
         },
         {
           "Name": "label",
@@ -2923,13 +2999,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo="
+          "Value": "sha256-hA3UU6kVaxy1++YIHXVUMgNPs6UvyOTDKvbZ3ALFJUU="
         }
       ]
     },
     {
-      "Route": "css/site.lugek5hnai.css",
-      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/css/site.css",
+      "Route": "css/site.0rnljtgw45.css.gz",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/w4ges9dtxa-0rnljtgw45.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2938,7 +3014,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "637"
+          "Value": "636"
         },
         {
           "Name": "Content-Type",
@@ -2946,56 +3022,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo=\""
+          "Value": "\"/IC+tps5dUxE9xK2NGy482R1PWUIKOyYcdc1E+wcFAs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Feb 2025 14:30:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lugek5hnai"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-zeR5PHeeHbxfGkL8WV86OzdoF6UnjuCmnagaocD+cbo="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.lugek5hnai.css.gz",
-      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/w4ges9dtxa-lugek5hnai.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "312"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"n4te0btuR7bRk4mRh2N5HuBqCrDu5bjitpFCR/Qw63g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Feb 2025 14:30:19 GMT"
+          "Value": "Sat, 08 Mar 2025 00:14:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3013,7 +3044,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lugek5hnai"
+          "Value": "0rnljtgw45"
         },
         {
           "Name": "label",
@@ -3021,7 +3052,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-n4te0btuR7bRk4mRh2N5HuBqCrDu5bjitpFCR/Qw63g="
+          "Value": "sha256-/IC+tps5dUxE9xK2NGy482R1PWUIKOyYcdc1E+wcFAs="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/w4ges9dtxa-0rnljtgw45.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001569858713"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "636"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/IC+tps5dUxE9xK2NGy482R1PWUIKOyYcdc1E+wcFAs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 00:14:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"hA3UU6kVaxy1++YIHXVUMgNPs6UvyOTDKvbZ3ALFJUU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hA3UU6kVaxy1++YIHXVUMgNPs6UvyOTDKvbZ3ALFJUU="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1541"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hA3UU6kVaxy1++YIHXVUMgNPs6UvyOTDKvbZ3ALFJUU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 00:14:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hA3UU6kVaxy1++YIHXVUMgNPs6UvyOTDKvbZ3ALFJUU="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/w4ges9dtxa-0rnljtgw45.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "636"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/IC+tps5dUxE9xK2NGy482R1PWUIKOyYcdc1E+wcFAs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 00:14:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/IC+tps5dUxE9xK2NGy482R1PWUIKOyYcdc1E+wcFAs="
         }
       ]
     },
@@ -3916,6 +4084,662 @@
         {
           "Name": "integrity",
           "Value": "sha256-tOy5kS1PTkjkEg7bjV8bJa0VpoEZJUHnbqYmm1YyhMg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/concert.35hkrl0gab.webp",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/concert.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110482"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xwJsPz2pYaMdxmMJC6c4xEKSkn8xOGpcEztPjKXBedg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 01 Mar 2025 01:05:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "35hkrl0gab"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/concert.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xwJsPz2pYaMdxmMJC6c4xEKSkn8xOGpcEztPjKXBedg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/concert.webp",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/concert.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110482"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xwJsPz2pYaMdxmMJC6c4xEKSkn8xOGpcEztPjKXBedg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 01 Mar 2025 01:05:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xwJsPz2pYaMdxmMJC6c4xEKSkn8xOGpcEztPjKXBedg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/image1.1zyl7c02mz.webp",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image1.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TTtRvT4ored20dqXyNSd++wDDpiSUUEbYyS/QbEiUtA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 23:47:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1zyl7c02mz"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/image1.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TTtRvT4ored20dqXyNSd++wDDpiSUUEbYyS/QbEiUtA="
+        }
+      ]
+    },
+    {
+      "Route": "Images/image1.webp",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image1.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TTtRvT4ored20dqXyNSd++wDDpiSUUEbYyS/QbEiUtA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 23:47:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TTtRvT4ored20dqXyNSd++wDDpiSUUEbYyS/QbEiUtA="
+        }
+      ]
+    },
+    {
+      "Route": "Images/image2.jpeg",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image2.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "892934"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GfrYvV+i1T0cLiiynmy8Y0T2LXTL6aHMh70cJcKi9IY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 23:52:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GfrYvV+i1T0cLiiynmy8Y0T2LXTL6aHMh70cJcKi9IY="
+        }
+      ]
+    },
+    {
+      "Route": "Images/image2.xahia6nhvk.jpeg",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image2.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "892934"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GfrYvV+i1T0cLiiynmy8Y0T2LXTL6aHMh70cJcKi9IY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 23:52:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xahia6nhvk"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/image2.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GfrYvV+i1T0cLiiynmy8Y0T2LXTL6aHMh70cJcKi9IY="
+        }
+      ]
+    },
+    {
+      "Route": "Images/image3.exmng4u8fj.jpg",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "299479"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LqwJZp/EqPa2pIxmvhp5jVZvtqWfs4hbSDVDLGdoAgM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 23:56:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "exmng4u8fj"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/image3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LqwJZp/EqPa2pIxmvhp5jVZvtqWfs4hbSDVDLGdoAgM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/image3.jpg",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "299479"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LqwJZp/EqPa2pIxmvhp5jVZvtqWfs4hbSDVDLGdoAgM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 23:56:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LqwJZp/EqPa2pIxmvhp5jVZvtqWfs4hbSDVDLGdoAgM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/image4.webp",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "60200"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+uZlazQSRuoQDU1lCvrVfV/HBXDL7GPN4PUkmaSGNSI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 23:59:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+uZlazQSRuoQDU1lCvrVfV/HBXDL7GPN4PUkmaSGNSI="
+        }
+      ]
+    },
+    {
+      "Route": "Images/image4.ym0fuydjif.webp",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "60200"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+uZlazQSRuoQDU1lCvrVfV/HBXDL7GPN4PUkmaSGNSI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 23:59:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ym0fuydjif"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/image4.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+uZlazQSRuoQDU1lCvrVfV/HBXDL7GPN4PUkmaSGNSI="
+        }
+      ]
+    },
+    {
+      "Route": "Images/soccer.90pyph5w4g.webp",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/soccer.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "135134"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GaDFBviqVPQ2JwIDv/puZ/apV0RJsMtdij2RjXfMmnc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 01 Mar 2025 00:59:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "90pyph5w4g"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/soccer.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GaDFBviqVPQ2JwIDv/puZ/apV0RJsMtdij2RjXfMmnc="
+        }
+      ]
+    },
+    {
+      "Route": "Images/soccer.webp",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/soccer.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "135134"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GaDFBviqVPQ2JwIDv/puZ/apV0RJsMtdij2RjXfMmnc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 01 Mar 2025 00:59:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GaDFBviqVPQ2JwIDv/puZ/apV0RJsMtdij2RjXfMmnc="
+        }
+      ]
+    },
+    {
+      "Route": "Images/tech.jpg",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/tech.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "294584"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fWWSUDBcJ7wlNnJeWqWQWqt16kH0pFnZ78RBKqcCipg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 01 Mar 2025 01:02:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fWWSUDBcJ7wlNnJeWqWQWqt16kH0pFnZ78RBKqcCipg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/tech.px4uxcwumn.jpg",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/tech.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "294584"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fWWSUDBcJ7wlNnJeWqWQWqt16kH0pFnZ78RBKqcCipg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 01 Mar 2025 01:02:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "px4uxcwumn"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/tech.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fWWSUDBcJ7wlNnJeWqWQWqt16kH0pFnZ78RBKqcCipg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/user.78lu5u9n5c.png",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/user.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24784"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"93NpKLMzJZFUsZAzUGXGo6qECwQJeZ817mIywug+R2Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 23:59:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "78lu5u9n5c"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/user.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-93NpKLMzJZFUsZAzUGXGo6qECwQJeZ817mIywug+R2Y="
+        }
+      ]
+    },
+    {
+      "Route": "Images/user.png",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/user.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24784"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"93NpKLMzJZFUsZAzUGXGo6qECwQJeZ817mIywug+R2Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 23:59:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-93NpKLMzJZFUsZAzUGXGo6qECwQJeZ817mIywug+R2Y="
         }
       ]
     },

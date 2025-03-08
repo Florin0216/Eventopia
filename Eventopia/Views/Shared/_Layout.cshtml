@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/Eventopia.styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/5d38f6ea9c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom bg-white mb-3">
         <div class="container-fluid">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Eventopia</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -21,10 +24,66 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <div class="dropdown">
+                            <a class="btn btn-white dropdown-toggle text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Concerts
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Action</button></li>
+                                <li><button class="dropdown-item" type="button">Another action</button></li>
+                                <li><button class="dropdown-item" type="button">Something else here</button></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <div class="dropdown">
+                            <a class="btn btn-white dropdown-toggle text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sports
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Action</button></li>
+                                <li><button class="dropdown-item" type="button">Another action</button></li>
+                                <li><button class="dropdown-item" type="button">Something else here</button></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="btn btn-white dropdown-toggle text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Theater
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Action</button></li>
+                                <li><button class="dropdown-item" type="button">Another action</button></li>
+                                <li><button class="dropdown-item" type="button">Something else here</button></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="btn btn-white dropdown-toggle text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Festivals
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Action</button></li>
+                                <li><button class="dropdown-item" type="button">Another action</button></li>
+                                <li><button class="dropdown-item" type="button">Something else here</button></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="User" asp-action="OrganizerDash">Organizer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="User" asp-action="Dashboard">My tickets</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="d-flex justify-content-between">
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Login">Sign In</a>
+                            <img class="rounded-5 profile-icon" src="~/Images/user.png" alt="profile"/>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -39,7 +98,7 @@
 
 <footer class="border-top footer text-muted">
     <div class="container">
-        &copy; 2025 - Eventopia - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        &copy; 2025 - Eventopia
     </div>
 </footer>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -29,3 +29,65 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  height: 60px;
+  border-radius: 30px;
+  padding-left: 35px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.caption {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.custom-btn {
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 50px; 
+  width: 80px; 
+  height: 80px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-btn:hover {
+  background-color: #0d6efd; 
+  color:white;
+}
+
+.custom-carousel-control{
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-image {
+  width: 1272px;
+  height: 513px;
+  object-fit: cover; 
+}
+
+.profile-icon{
+  height: 40px;
+  width: 40px;
+}
+
+.profile{
+  height: 100px;
+  width: 100px;
+}
+

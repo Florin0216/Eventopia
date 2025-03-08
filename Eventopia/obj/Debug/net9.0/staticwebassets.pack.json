@@ -5,6 +5,38 @@
       "PackagePath": "staticwebassets/Eventopia.wxn78vw8xw.bundle.scp.css"
     },
     {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/concert.webp",
+      "PackagePath": "staticwebassets/Images/concert.webp"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image1.webp",
+      "PackagePath": "staticwebassets/Images/image1.webp"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image2.jpeg",
+      "PackagePath": "staticwebassets/Images/image2.jpeg"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image3.jpg",
+      "PackagePath": "staticwebassets/Images/image3.jpg"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/image4.webp",
+      "PackagePath": "staticwebassets/Images/image4.webp"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/soccer.webp",
+      "PackagePath": "staticwebassets/Images/soccer.webp"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/tech.jpg",
+      "PackagePath": "staticwebassets/Images/tech.jpg"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/user.png",
+      "PackagePath": "staticwebassets/Images/user.png"
+    },
+    {
       "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

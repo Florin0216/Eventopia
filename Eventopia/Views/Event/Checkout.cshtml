@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Checkout";
+    Layout = "_Layout";
+    
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <h2 class="card-title mb-0 text-center">Checkout</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="cardNumber" placeholder="CARD NUMBER" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="cardholder" placeholder="CARDHOLDER NAME" required>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ticketType" class="form-label">Ticket Type</label>
+                            <input type="text" class="form-control" id="ticketType" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="totalAmount" class="form-label">Total Amount</label>
+                            <input type="text" class="form-control" id="totalAmount" readonly>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" asp-controller="Event" asp-action="Confirmation" class="btn btn-primary btn-lg">Confirm Purchase</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

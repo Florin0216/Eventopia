@@ -1,0 +1,77 @@
+@{
+    ViewData["Title"] = "Organizer Dashboard";
+    Layout = "_Layout";
+}
+
+<div class="d-flex justify-content-center">
+    <img src="~/Images/user.png" class="profile" alt="profile"/>
+</div>
+<div class="container">
+    <div class="row">
+        <h1 class="mb-4 text-center">Welcome, Organizer!</h1>
+        <div class="col-md-12 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">General Analytics</h2>
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="card shadow-sm p-3">
+                                <h5>Total Tickets Sold</h5>
+                                <p class="display-6 fw-bold text-primary">350</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card shadow-sm p-3">
+                                <h5>Total Revenue</h5>
+                                <p class="display-6 fw-bold text-success">€15,000</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card shadow-sm p-3">
+                                <h5>Active Events</h5>
+                                <p class="display-6 fw-bold text-warning">2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="d-grid gap-3">
+                <a asp-controller="Event" asp-action="EventCreate" class="btn btn-primary btn-lg shadow-sm">
+                    <i class="bi bi-plus-circle me-2"></i>
+                    Create Event
+                </a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div id="events" class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">My Events</h2>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start p-4">
+                            <div class="ms-2 me-auto">
+                                <h5 class="fw-bold">Concert Night</h5>
+                                <p class="mb-1 text-muted">Madison Square Garden, New York, NY</p>
+                                <small class="text-success">100 Tickets Sold</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-primary rounded-pill">Oct 25, 2023</span>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start p-4">
+                            <div class="ms-2 me-auto">
+                                <h5 class="fw-bold">Tech Conference</h5>
+                                <p class="mb-1 text-muted">San Francisco, CA</p>
+                                <small class="text-success">250 Tickets Sold</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-primary rounded-pill">Nov 15, 2023</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

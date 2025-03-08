@@ -1,0 +1,60 @@
+@{
+    ViewData["Title"] = "Sign Up"; 
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center border-bottom">Create an account</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label"><b>Username</b></label>
+                            <input type="text" class="form-control form-control-lg" id="username" placeholder="Your Username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label"><b>First Name</b></label>
+                            <input type="text" class="form-control form-control-lg" id="firstName" placeholder="Your First Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label"><b>Last Name</b></label>
+                            <input type="text" class="form-control form-control-lg" id="lastName" placeholder="Your Last Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"><b>E-mail</b></label>
+                            <input type="email" class="form-control form-control-lg" id="email" placeholder="Your E-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label"><b>Password</b></label>
+                            <input type="password" class="form-control form-control-lg" id="password" placeholder="At least 8 characters">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label"><b>Phone</b></label>
+                            <input type="number" class="form-control form-control-lg" id="phone" placeholder="Your Phone Number">
+                        </div>
+                        <div class="">
+                            <label for="gender" class="form-label"><b>Gender</b></label>
+                            <div class="form-floating">
+                                <select class="form-select" id="gender" aria-label="Floating label select example">
+                                    <option selected hidden=""></option>
+                                    <option value="M">Male</option>
+                                    <option value="F">Female</option>
+                                    <option value="O">Other</option>
+                                </select>
+                                <label for="gender">Select a gender</label>
+                            </div>
+                        </div>
+                        <div class="d-grid mt-3">
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-3">
+                        <p>Already have an account? <a asp-controller="Home" asp-action="Login" class="text-decoration-none">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
