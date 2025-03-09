@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="7c6c28da-f594-4b64-add3-6f05ad9a84d9" name="eventopia Mapping">
+      <data-sources db="0c4f73d0-c53e-43d6-a5b5-d98f3041827e" />
+      <scope>
+        <node kind="database" qname="eventopia" />
+      </scope>
+    </mapping>
+  </component>
+</project>
