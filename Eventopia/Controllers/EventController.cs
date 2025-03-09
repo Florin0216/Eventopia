@@ -5,6 +5,7 @@ namespace Eventopia.Controllers;
 public class EventController : Controller
 {
 
+    [HttpGet("/events")]
     public IActionResult EventListing()
     {
         return View();

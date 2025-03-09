@@ -13,16 +13,36 @@ public class HomeController : Controller
         _userService = userService;
     }
     
+    [Route("/")]
     public IActionResult Index()
     {
         return View();
     }
 
+    [Route("/login")]
+    [HttpGet]
     public IActionResult Login()
     {
         return View();
     }
     
+    [Route("/login")]
+    [HttpPost]
+    public IActionResult Login(Users user)
+    {
+        if (ModelState.IsValid)
+        {
+            var existingUser = _userService.GetUserByEmail(user.Email);
+            if (existingUser != null)
+            {
+                return Redirect("/events");
+            }
+            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+        }
+        return View();
+    }
+    
+    [Route("/register")]
     [HttpGet]
     public IActionResult SignUp()
     {
@@ -30,6 +50,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
+    [Route("/register")]
     public IActionResult SignUp(Users user)
     {
         if (ModelState.IsValid)
