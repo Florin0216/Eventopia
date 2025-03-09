@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Eventopia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5b564d3d4ad0560c2b32d7f9c8780bf7a28415d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48ddcd8a28bd93f0de5611843a197991f98b0f4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Eventopia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Eventopia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
