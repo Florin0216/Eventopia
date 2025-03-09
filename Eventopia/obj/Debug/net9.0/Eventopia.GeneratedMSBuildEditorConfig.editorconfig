@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnQvRXZlbnRDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/florin/RiderProjects/Eventopia/Eventopia/Views/Event/EventDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnQvRXZlbnREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/florin/RiderProjects/Eventopia/Eventopia/Views/Event/EventListing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnQvRXZlbnRMaXN0aW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

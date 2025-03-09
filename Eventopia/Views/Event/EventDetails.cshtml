@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_Layout";
+}
+
+<div class="container my-5">
+    <div class="event-detail">
+        <h1 class="display-4 mb-4 text-center">Concert Night</h1>
+        <img src="Images/concert.webp" alt="Event 1" class="img-fluid">
+        <p class="lead"><strong>Date:</strong> October 25, 2023</p>
+        <p class="lead"><strong>Location:</strong> Madison Square Garden, New York, NY</p>
+        <p class="lead"><strong>Description:</strong> Join us for an unforgettable night of music featuring top artists from around the world. Don't miss out on this incredible experience!</p>
+        <div class="ticket-options">
+            <h3 class="mb-4">Ticket Options</h3>
+            <form id="ticketForm" method="get">
+                <div class="list-group mb-4">
+                    <label class="list-group-item d-flex justify-content-between align-items-center">
+                        <input type="radio" name="ticketType" value="General Admission" class="form-check-input me-2" required>
+                        General Admission
+                        <span class="badge bg-primary rounded-pill">$50</span>
+                    </label>
+                    <label class="list-group-item d-flex justify-content-between align-items-center">
+                        <input type="radio" name="ticketType" value="VIP" class="form-check-input me-2" required>
+                        VIP
+                        <span class="badge bg-success rounded-pill">$200</span>
+                    </label>
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+                <button type="submit" asp-controller="Event" asp-action="Checkout" class="btn btn-primary btn-lg">Buy Now</button>
+            </form>
+        </div>
+    </div>
+</div>
