@@ -16,9 +16,9 @@ public class TicketUser
     public int ticketId { get; set; }
     
     [ForeignKey("Users")]
-    [Column("user_id")]
-    public int userId { get; set; }
+    [Column("Id")]
+    public string userId { get; set; }
     
-    public virtual Ticket ticket { get; set; }
-    public virtual Users user { get; set; }
+    public Ticket Ticket { get; set; }
+    public Users User { get; set; }
 }

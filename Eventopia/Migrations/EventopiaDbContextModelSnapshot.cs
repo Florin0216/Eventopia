@@ -31,8 +31,8 @@ namespace Eventopia.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("date")
-                        .HasColumnType("timestamp with time zone")
+                    b.Property<DateOnly>("date")
+                        .HasColumnType("date")
                         .HasColumnName("event_date");
 
                     b.Property<string>("description")
@@ -56,8 +56,8 @@ namespace Eventopia.Migrations
                         .HasColumnType("text")
                         .HasColumnName("photo_path");
 
-                    b.Property<DateTime>("time")
-                        .HasColumnType("timestamp with time zone")
+                    b.Property<TimeOnly>("time")
+                        .HasColumnType("time without time zone")
                         .HasColumnName("event_time");
 
                     b.HasKey("Id");
@@ -133,22 +133,20 @@ namespace Eventopia.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("text");
-
                     b.Property<int>("ticketId")
                         .HasColumnType("integer")
                         .HasColumnName("ticket_id");
 
-                    b.Property<int>("userId")
-                        .HasColumnType("integer")
-                        .HasColumnName("user_id");
+                    b.Property<string>("userId")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("Id");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
                     b.HasIndex("ticketId");
+
+                    b.HasIndex("userId");
 
                     b.ToTable("TicketUser");
                 });
@@ -367,13 +365,13 @@ namespace Eventopia.Migrations
             modelBuilder.Entity("Eventopia.Models.TicketEvent", b =>
                 {
                     b.HasOne("Eventopia.Models.Event", "Event")
-                        .WithMany("TicketEvents")
+                        .WithMany()
                         .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Eventopia.Models.Ticket", "Ticket")
-                        .WithMany("TicketEvents")
+                        .WithMany()
                         .HasForeignKey("TicketId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -385,13 +383,15 @@ namespace Eventopia.Migrations
 
             modelBuilder.Entity("Eventopia.Models.TicketUser", b =>
                 {
-                    b.HasOne("Eventopia.Models.Users", "User")
-                        .WithMany("TicketUsers")
-                        .HasForeignKey("UserId");
-
                     b.HasOne("Eventopia.Models.Ticket", "Ticket")
-                        .WithMany("TicketUsers")
+                        .WithMany()
                         .HasForeignKey("ticketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Eventopia.Models.Users", "User")
+                        .WithMany()
+                        .HasForeignKey("userId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -449,23 +449,6 @@ namespace Eventopia.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Eventopia.Models.Event", b =>
-                {
-                    b.Navigation("TicketEvents");
-                });
-
-            modelBuilder.Entity("Eventopia.Models.Ticket", b =>
-                {
-                    b.Navigation("TicketEvents");
-
-                    b.Navigation("TicketUsers");
-                });
-
-            modelBuilder.Entity("Eventopia.Models.Users", b =>
-                {
-                    b.Navigation("TicketUsers");
                 });
 #pragma warning restore 612, 618
         }

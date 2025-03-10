@@ -33,22 +33,13 @@ public class EventController : Controller
     }
     
     [HttpPost("/createEvent")]
-    public async Task<IActionResult> EventCreate(Event model, List<Ticket> tickets)
+    public async Task<IActionResult> EventCreate(Event model,string date, string time)
     {
         if (ModelState.IsValid)
         {
+            model.date = DateOnly.Parse(date);
+            model.time = TimeOnly.Parse(time);
             _context.Events.Add(model);
-            await _context.SaveChangesAsync();
-            
-            foreach (var ticket in tickets)
-            {
-                var eventTicket = new TicketEvent
-                {
-                    EventId = model.Id,
-                    Ticket = ticket
-                };
-                _context.TicketEvents.Add(eventTicket);
-            }
             await _context.SaveChangesAsync();
 
             return Redirect("/events");

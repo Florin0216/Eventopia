@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Eventopia.Migrations
 {
     /// <inheritdoc />
-    public partial class addedtickeandevent : Migration
+    public partial class addeventandticket : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,8 +19,8 @@ namespace Eventopia.Migrations
                     event_id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     event_name = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
-                    event_date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    event_time = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    event_date = table.Column<DateOnly>(type: "date", nullable: false),
+                    event_time = table.Column<TimeOnly>(type: "time without time zone", nullable: false),
                     event_location = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     event_description = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     photo_path = table.Column<string>(type: "text", nullable: true)
@@ -79,17 +79,17 @@ namespace Eventopia.Migrations
                     id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     ticket_id = table.Column<int>(type: "integer", nullable: false),
-                    user_id = table.Column<int>(type: "integer", nullable: false),
-                    UserId = table.Column<string>(type: "text", nullable: true)
+                    Id = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TicketUser", x => x.id);
                     table.ForeignKey(
-                        name: "FK_TicketUser_AspNetUsers_UserId",
-                        column: x => x.UserId,
+                        name: "FK_TicketUser_AspNetUsers_Id",
+                        column: x => x.Id,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_TicketUser_Ticket_ticket_id",
                         column: x => x.ticket_id,
@@ -109,14 +109,14 @@ namespace Eventopia.Migrations
                 column: "ticket_id");
 
             migrationBuilder.CreateIndex(
+                name: "IX_TicketUser_Id",
+                table: "TicketUser",
+                column: "Id");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_TicketUser_ticket_id",
                 table: "TicketUser",
                 column: "ticket_id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TicketUser_UserId",
-                table: "TicketUser",
-                column: "UserId");
         }
 
         /// <inheritdoc />

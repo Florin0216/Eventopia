@@ -27,6 +27,4 @@ public class Ticket
     [Column(name: "purchase_date")]
     public DateTime? purchaseDate { get; set; }
     
-    public virtual ICollection<TicketEvent> TicketEvents { get; set; }
-    public virtual ICollection<TicketUser> TicketUsers { get; set; }
 }

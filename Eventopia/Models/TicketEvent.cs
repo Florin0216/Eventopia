@@ -19,6 +19,6 @@ public class TicketEvent
     [Column("event_id")]
     public int EventId { get; set; }
     
-    public virtual Ticket Ticket { get; set; }
-    public virtual Event Event { get; set; }
+    public Ticket Ticket { get; set; }
+    public Event Event { get; set; }
 }

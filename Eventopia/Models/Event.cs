@@ -19,12 +19,12 @@ public class Event
     [Column(name: "event_date")]
     [DataType(DataType.Date)]
     [Required]
-    public DateTime date { get; set; }
+    public DateOnly date { get; set; }
     
     [Column(name: "event_time")]
     [DataType(DataType.Time)]
     [Required]
-    public DateTime time { get; set; }
+    public TimeOnly time { get; set; }
     
     [Column(name: "event_location")]
     [StringLength(50)]
@@ -38,5 +38,4 @@ public class Event
     [Column(name: "photo_path")]
     public string? photoPath { get; set; }
     
-    public virtual ICollection<TicketEvent> TicketEvents { get; set; }
 }
