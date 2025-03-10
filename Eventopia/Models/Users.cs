@@ -18,4 +18,6 @@ public class Users : IdentityUser
     [Column(name: "Gender")]
     [StringLength(1)]
     public string? Gender { get; set; }
+    
+    public virtual ICollection<TicketUser> TicketUsers { get; set; }
 }

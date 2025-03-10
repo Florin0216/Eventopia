@@ -1,33 +1,40 @@
+@model Eventopia.Models.Event
+
 @{
+    ViewData["Title"] = "Create";
     Layout = "_Layout";
 }
 
 <div class="container mt-5">
     <h1 class="mb-4 text-center">Create a New Event</h1>
-    <form>
+    <form asp-action="EventCreate" method="post">
         <div class="mb-3">
             <label for="eventName" class="form-label"><b>Event Name</b></label>
-            <input type="text" class="form-control form-control-lg" id="eventName" placeholder="Enter event name">
+            <input asp-for="name" type="text" class="form-control form-control-lg" id="eventName" placeholder="Enter event name">
         </div>
         <div class="mb-3">
             <label for="eventDate" class="form-label"><b>Event Date</b></label>
-            <input type="date" class="form-control form-control-lg" id="eventDate">
+            <input asp-for="date" type="date" class="form-control form-control-lg" id="eventDate">
+        </div>
+        <div class="mb-3">
+            <label for="eventTime" class="form-label"><b>Event Date</b></label>
+            <input asp-for="time" type="time" class="form-control form-control-lg" id="eventTime">
         </div>
         <div class="mb-3">
             <label for="eventLocation" class="form-label"><b>Location</b></label>
-            <input type="text" class="form-control form-control-lg" id="eventLocation" placeholder="Enter event location">
+            <input asp-for="location" type="text" class="form-control form-control-lg" id="eventLocation" placeholder="Enter event location">
         </div>
         <div class="mb-3">
             <label for="eventDescription" class="form-label"><b>Description</b></label>
-            <textarea class="form-control" id="eventDescription" rows="3" placeholder="Enter event description"></textarea>
+            <textarea asp-for="description" class="form-control" id="eventDescription" rows="3" placeholder="Enter event description"></textarea>
         </div>
         <div class="mb-3">
             <label for="eventImage" class="form-label"><b>Event Image</b></label>
-            <input type="file" class="form-control" id="eventImage">
+            <input asp-for="photoPath" type="file" class="form-control" id="eventImage">
         </div>
-        <div class="mb-3">
-            <label for="ticketPrice" class="form-label"><b>Price</b></label>
-            <input type="number" class="form-control" id="ticketPrice" placeholder="Enter ticket price">
+        <div class="text-center">
+            <a asp-controller="Ticket" asp-action="TicketCreate" class="btn btn-secondary">Add Ticket</a>
+            <button type="submit" class="btn btn-primary">Create Event</button>
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Create Event</button>

@@ -1,4 +1,4 @@
-@model Users
+@model Eventopia.Models.Users
 
 @{
     ViewData["Title"] = "Login";
@@ -14,7 +14,7 @@
                     <form asp-action="Login" method="post">
                         <div class="">
                             <label for="email" class="form-label"></label>
-                            <input asp-for="Email" type="email" class="form-control form-control-lg" id="email" placeholder="Email">
+                            <input asp-for="UserName" type="text" class="form-control form-control-lg" id="email" placeholder="Username">
                         </div>
                         <div class="">
                             <label for="password" class="form-label"></label>

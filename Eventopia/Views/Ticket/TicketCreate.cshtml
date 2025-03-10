@@ -1,0 +1,23 @@
+@model Eventopia.Models.Ticket
+
+@{
+    ViewData["Title"] = "Add Ticket";
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Add Ticket</h1>
+    <form asp-action="TicketCreate" method="post">
+        <div class="mb-3">
+            <label for="ticketType" class="form-label"><b>Ticket Type</b></label>
+            <input asp-for="type" type="text" class="form-control" id="ticketType" placeholder="Enter ticket type (e.g., General Admission)">
+        </div>
+        <div class="mb-3">
+            <label for="ticketPrice" class="form-label"><b>Price</b></label>
+            <input asp-for="price" type="number" class="form-control" id="ticketPrice" placeholder="Enter ticket price">
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Add Ticket</button>
+        </div>
+    </form>
+</div>
