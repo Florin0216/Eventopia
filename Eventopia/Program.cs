@@ -18,6 +18,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<UserService>();
 
+builder.Services.AddScoped<EventService>();
+
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));

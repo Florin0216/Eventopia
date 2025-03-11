@@ -2,20 +2,17 @@ using Eventopia.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Eventopia.Services;
 
 namespace Eventopia.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly SignInManager<Users> _signInManager;
-    private readonly UserManager<Users> _userManager;
-    private readonly RoleManager<IdentityRole> _roleManager;
 
-    public HomeController(SignInManager<Users> signInManager, UserManager<Users> userManager, RoleManager<IdentityRole> roleManager)
+    private readonly UserService _userService;
+    public HomeController(UserService userService)
     {
-        _signInManager = signInManager;
-        _userManager = userManager;
-        _roleManager = roleManager;
+        _userService = userService;
     }
     
     [Route("/")]
@@ -37,13 +34,10 @@ public class HomeController : Controller
     {
         if (ModelState.IsValid)
         {
-            if (user != null)
+            var result = await _userService.Login(user.UserName, user.PasswordHash, false, false);
+            if (result.Succeeded)
             {
-                var result = await _signInManager.PasswordSignInAsync(user.UserName, user.PasswordHash, isPersistent: false, lockoutOnFailure: false);
-                if (result.Succeeded)
-                {
-                    return Redirect("/events");
-                }
+                return Redirect("/events");
             }
         }
 
@@ -60,24 +54,20 @@ public class HomeController : Controller
 
     [HttpPost]
     [Route("/register")]
-    public async Task<IActionResult> SignUp(Users user, string Role)
+    public async Task<IActionResult> SignUp(Users user, string? Role)
     {
         if (ModelState.IsValid)
         {
-            var result = await _userManager.CreateAsync(user, user.PasswordHash);
-
+            var roles = new List<string> { "User" };
+            
+            if (!string.IsNullOrEmpty(Role))
+            {
+                roles.Add("Organizer");
+            }
+            var result = await _userService.Register(user,user.PasswordHash, roles);
+            
             if (result.Succeeded)
             {
-                if (await _roleManager.RoleExistsAsync("User"))
-                {
-                    await _userManager.AddToRoleAsync(user, "User");
-                }
-                
-                if (Role == "Organizer" && await _roleManager.RoleExistsAsync("Organizer"))
-                {
-                    await _userManager.AddToRoleAsync(user, "Organizer");
-                }
-
                 return Redirect("/login");
             }
         }
@@ -90,7 +80,7 @@ public class HomeController : Controller
     [Route("/logout")]
     public async Task<IActionResult> Logout()
     {
-        await _signInManager.SignOutAsync();
+        await _userService.Logout();
         return Redirect("/login");
     }
 

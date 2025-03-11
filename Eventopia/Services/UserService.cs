@@ -1,25 +1,45 @@
 using Eventopia.Data;
 using Eventopia.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Eventopia.Services;
 
 public class UserService
 {
-    private readonly EventopiaDbContext _context;
+    private readonly SignInManager<Users> _signInManager;
+    private readonly UserManager<Users> _userManager;
+    private readonly RoleManager<IdentityRole> _roleManager;
 
-    public UserService(EventopiaDbContext context)
+    public UserService(SignInManager<Users> signInManager, UserManager<Users> userManager, RoleManager<IdentityRole> roleManager)
     {
-        _context = context;
+        _signInManager = signInManager;
+        _userManager = userManager;
+        _roleManager = roleManager;
     }
 
-    public void AddUser(Users user)
+    public async Task<IdentityResult> Register(Users user, string password, List<string> roles)
     {
-        _context.Users.Add(user);
-        _context.SaveChanges();
+        var result =  await _userManager.CreateAsync(user, password);
+        
+        if (result.Succeeded)
+        {
+            foreach (var role in roles)
+            {
+                await _userManager.AddToRoleAsync(user, role);
+            }
+        }
+        
+        return result;
+    }
+    
+    public async Task<SignInResult> Login(string username, string password, bool isPersistent,
+        bool lockoutOnFailure)
+    {
+        return await _signInManager.PasswordSignInAsync(username, password, isPersistent, lockoutOnFailure);
     }
 
-    public Users GetUserByEmail(string email)
+    public async Task Logout()
     {
-        return _context.Users.FirstOrDefault(u => u.Email == email);
+        await _signInManager.SignOutAsync();
     }
 }

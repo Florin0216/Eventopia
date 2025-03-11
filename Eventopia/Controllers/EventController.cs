@@ -1,5 +1,6 @@
 using Eventopia.Data;
 using Eventopia.Models;
+using Eventopia.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,21 +8,23 @@ namespace Eventopia.Controllers;
 
 public class EventController : Controller
 {
-    private readonly EventopiaDbContext _context;
+    private readonly EventService _eventService;
 
-    public EventController(EventopiaDbContext context)
+    public EventController(EventService eventService)
     {
-        _context = context;
+        _eventService = eventService;
     }
 
     [HttpGet("/events")]
-    public IActionResult EventListing()
+    public async Task<ViewResult> EventListing()
     {
-        return View();
+        var events = await _eventService.GetAllEvents();
+        return View(events);
     }
 
     public IActionResult EventDetails()
     {
+
         return View();
     }
     
@@ -37,11 +40,7 @@ public class EventController : Controller
     {
         if (ModelState.IsValid)
         {
-            model.date = DateOnly.Parse(date);
-            model.time = TimeOnly.Parse(time);
-            _context.Events.Add(model);
-            await _context.SaveChangesAsync();
-
+            await _eventService.CreateEvent(model, date, time);
             return Redirect("/events");
         }
         return View(model);
