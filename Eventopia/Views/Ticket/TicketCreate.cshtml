@@ -1,23 +1,50 @@
-@model Eventopia.Models.Ticket
+@model Ticket
 
 @{
     ViewData["Title"] = "Add Ticket";
     Layout = "_Layout";
+    
 }
 
 <div class="container mt-5">
     <h1 class="mb-4 text-center">Add Ticket</h1>
-    <form asp-action="TicketCreate" method="post">
-        <div class="mb-3">
-            <label for="ticketType" class="form-label"><b>Ticket Type</b></label>
-            <input asp-for="type" type="text" class="form-control" id="ticketType" placeholder="Enter ticket type (e.g., General Admission)">
+    @if (ViewBag.Tickets != null)
+    {
+        <div class="mb-4">
+            <h4>Added Tickets</h4>
+            <ul class="list-group">
+                @foreach (var ticket in ViewBag.Tickets)
+                {
+                    <li class="list-group-item">
+                        <strong>Type:</strong> @ticket.Type,
+                        <strong>Price:</strong> @ticket.Price.ToString("C"),
+                        <strong>Quantity:</strong> @ticket.Quantity
+                    </li>
+                }
+            </ul>
         </div>
-        <div class="mb-3">
-            <label for="ticketPrice" class="form-label"><b>Price</b></label>
-            <input asp-for="price" type="number" class="form-control" id="ticketPrice" placeholder="Enter ticket price">
+    }
+    <form asp-action="TicketCreate" method="post" id="ticketForm">
+        <input type="hidden" name="EventId" value="@ViewBag.EventId" />
+        <div id="ticketFields">
+            <div class="ticket-field mb-3">
+                <div class="mb-3">
+                    <label for="ticketType" class="form-label"><b>Ticket Type</b></label>
+                    <input asp-for="Type" type="text" id="ticketType" class="form-control ticket-type" placeholder="Enter ticket type (e.g., General Admission)">
+                </div>
+                <div class="mb-3">
+                    <label for="ticketPrice" class="form-label"><b>Price</b></label>
+                    <input asp-for="Price" type="number" id="ticketPrice" class="form-control ticket-price" placeholder="Enter ticket price">
+                </div>
+                <div class="mb-3">
+                    <label for="ticketQuantity" class="form-label"><b>Price</b></label>
+                    <input asp-for="Quantity" type="number" id="ticketQuantity" class="form-control ticket-price" placeholder="Enter ticket quantity">
+                </div>
+            </div>
         </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-primary">Add Ticket</button>
+            <button type="submit" name="action" value="AddAnotherTicket" id="addTicketButton" class="btn btn-secondary">Add Another Ticket</button>
+            <button type="submit" name="action" value="Finish" class="btn btn-primary">Finish</button>
         </div>
     </form>
 </div>

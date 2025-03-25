@@ -19,4 +19,9 @@ public class Users : IdentityUser
     [StringLength(1)]
     public string? Gender { get; set; }
     
+    public ICollection<EventUser>? EventUsers { get; set; }
+    public ICollection<TicketUser>? TicketUsers { get; set; }
+    public ICollection<Review>? Reviews { get; set; }
+    public ICollection<Checkout>? Checkouts { get; set; }
+    
 }

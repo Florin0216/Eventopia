@@ -12,30 +12,39 @@ public class Event
     public int Id { get; set; }
     
     [Column(name: "event_name")]
-    [StringLength(50)]
     [Required]
-    public string name { get; set; }
+    [StringLength(50)]
+    public string Name { get; set; }
     
     [Column(name: "event_date")]
     [DataType(DataType.Date)]
     [Required]
-    public DateOnly date { get; set; }
+    public DateOnly Date { get; set; }
     
     [Column(name: "event_time")]
     [DataType(DataType.Time)]
     [Required]
-    public TimeOnly time { get; set; }
-    
-    [Column(name: "event_location")]
-    [StringLength(50)]
-    [Required]
-    public string location { get; set; }
+    public TimeOnly Time { get; set; }
     
     [Column(name: "event_description")]
     [StringLength(500)]
-    public string? description { get; set; }
+    public string? Description { get; set; }
     
     [Column(name: "photo_path")]
-    public string? photoPath { get; set; }
+    public string? PhotoPath { get; set; }
+    
+    [ForeignKey("Venue")]
+    [Column(name: "venue_id")]
+    public int? VenueId { get; set; }
+    
+    public Venue? Venue { get; set; }
+    
+    [ForeignKey("Category")]
+    [Column(name: "category_id")]
+    public int? CategoryId { get; set; }
+    
+    public Category? Category { get; set; }
+    
+    public ICollection<TicketUser>? TicketUsers { get; set; }
     
 }

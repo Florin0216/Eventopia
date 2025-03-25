@@ -14,17 +14,30 @@ public class Ticket
     [Column(name: "ticket_type")]
     [StringLength(50)]
     [Required]
-    public string type { get; set; }
+    public string Type { get; set; }
     
     [Column(name: "ticket_price")]
     [Required]
-    public decimal price { get; set; }
+    public decimal Price { get; set; }
     
     [Column(name: "ticket_status")]
     [StringLength(50)]
-    public string? status { get; set; }
+    public string? Status { get; set; }
+    
+    [Column(name: "quantity")]
+    [Required]
+    public int Quantity { get; set; }
     
     [Column(name: "purchase_date")]
-    public DateTime? purchaseDate { get; set; }
+    public DateTime? PurchaseDate { get; set; }
+    
+    [ForeignKey("Event")]
+    [Column(name: "event_id")]
+    public int? EventId { get; set; }
+    
+    public Event? Event { get; set; }
+    
+    public ICollection<TicketUser>? TicketUsers { get; set; }
+    public ICollection<CheckoutTicket>? CheckoutTickets { get; set; }
     
 }

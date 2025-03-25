@@ -3,6 +3,7 @@ using System;
 using Eventopia.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Eventopia.Migrations
 {
     [DbContext(typeof(EventopiaDbContext))]
-    partial class EventopiaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250318122931_added all tables")]
+    partial class addedalltables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -114,7 +117,7 @@ namespace Eventopia.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CategoryId")
+                    b.Property<int>("CategoryId")
                         .HasColumnType("integer")
                         .HasColumnName("category_id");
 
@@ -141,7 +144,7 @@ namespace Eventopia.Migrations
                         .HasColumnType("time without time zone")
                         .HasColumnName("event_time");
 
-                    b.Property<int?>("VenueId")
+                    b.Property<int>("VenueId")
                         .HasColumnType("integer")
                         .HasColumnName("venue_id");
 
@@ -220,10 +223,6 @@ namespace Eventopia.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("EventId")
-                        .HasColumnType("integer")
-                        .HasColumnName("event_id");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric")
                         .HasColumnName("ticket_price");
@@ -249,9 +248,24 @@ namespace Eventopia.Migrations
 
                     b.HasKey("Id");
 
+                    b.ToTable("Ticket");
+                });
+
+            modelBuilder.Entity("Eventopia.Models.TicketEvent", b =>
+                {
+                    b.Property<int>("TicketId")
+                        .HasColumnType("integer")
+                        .HasColumnName("ticket_id");
+
+                    b.Property<int>("EventId")
+                        .HasColumnType("integer")
+                        .HasColumnName("event_id");
+
+                    b.HasKey("TicketId", "EventId");
+
                     b.HasIndex("EventId");
 
-                    b.ToTable("Ticket");
+                    b.ToTable("TicketEvent");
                 });
 
             modelBuilder.Entity("Eventopia.Models.TicketUser", b =>
@@ -533,11 +547,15 @@ namespace Eventopia.Migrations
                 {
                     b.HasOne("Eventopia.Models.Category", "Category")
                         .WithMany("Events")
-                        .HasForeignKey("CategoryId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Eventopia.Models.Venue", "Venue")
                         .WithMany("Events")
-                        .HasForeignKey("VenueId");
+                        .HasForeignKey("VenueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Category");
 
@@ -582,13 +600,23 @@ namespace Eventopia.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Eventopia.Models.Ticket", b =>
+            modelBuilder.Entity("Eventopia.Models.TicketEvent", b =>
                 {
                     b.HasOne("Eventopia.Models.Event", "Event")
-                        .WithMany()
-                        .HasForeignKey("EventId");
+                        .WithMany("TicketEvents")
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Eventopia.Models.Ticket", "Ticket")
+                        .WithMany("TicketEvents")
+                        .HasForeignKey("TicketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Event");
+
+                    b.Navigation("Ticket");
                 });
 
             modelBuilder.Entity("Eventopia.Models.TicketUser", b =>
@@ -626,12 +654,16 @@ namespace Eventopia.Migrations
 
             modelBuilder.Entity("Eventopia.Models.Event", b =>
                 {
+                    b.Navigation("TicketEvents");
+
                     b.Navigation("TicketUsers");
                 });
 
             modelBuilder.Entity("Eventopia.Models.Ticket", b =>
                 {
                     b.Navigation("CheckoutTickets");
+
+                    b.Navigation("TicketEvents");
 
                     b.Navigation("TicketUsers");
                 });

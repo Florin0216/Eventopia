@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Eventopia.Data;
 using Eventopia.Models;
 using Eventopia.Services;
@@ -9,10 +10,12 @@ namespace Eventopia.Controllers;
 public class EventController : Controller
 {
     private readonly EventService _eventService;
+    private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public EventController(EventService eventService)
+    public EventController(EventService eventService, IHttpContextAccessor httpContextAccessor)
     {
         _eventService = eventService;
+        _httpContextAccessor = httpContextAccessor;
     }
 
     [HttpGet("/events")]
@@ -38,12 +41,41 @@ public class EventController : Controller
     [HttpPost("/createEvent")]
     public async Task<IActionResult> EventCreate(Event model,string date, string time)
     {
+        var userId = _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         if (ModelState.IsValid)
         {
-            await _eventService.CreateEvent(model, date, time);
-            return Redirect("/events");
+            var eventId = await _eventService.Create(model, date, time, userId);
+            return RedirectToAction("TicketCreate", "Ticket", new { eventId = eventId });
         }
         return View(model);
+    }
+
+    [HttpGet("/updateEvent/{id}")]
+    [Authorize(Roles = "Organizer")]
+    public async Task<IActionResult> EventUpdate(int id)
+    {
+        var eventItem = await _eventService.GetEventById(id);
+        return View(eventItem);
+    }
+
+    [HttpPost("/updateEvent/{id}")]
+    public async Task<IActionResult> EventUpdate(int id,Event model, string date, string time)
+    {
+        if (ModelState.IsValid)
+        {
+            await _eventService.Update(id,model, date, time);
+            return RedirectToAction("OrganizerDash", "User");
+        }
+        return View(model);
+    }
+    
+    [HttpGet("/deleteEvent/{id}")]
+    [Authorize(Roles = "Organizer")]
+    public async Task<IActionResult> EventDelete(int id)
+    {
+        var eventItem = await _eventService.GetEventById(id);
+        await _eventService.Delete(eventItem);
+        return RedirectToAction("OrganizerDash", "User");
     }
 
     public IActionResult Checkout()

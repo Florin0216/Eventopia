@@ -110,7 +110,7 @@
 /home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/scopedcss/projectbundle/Eventopia.bundle.scp.css
 /home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/w4ges9dtxa-0rnljtgw45.gz
 /home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/j3c694o1ew-61n19gt1b8.gz
-/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-fr7q2aak1r.gz
+/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-47hxeiifp3.gz
 /home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/d1qvrrpv4a-bqjiyaj88i.gz
 /home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/kot6lshyrs-c2jlpeoesf.gz
 /home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/on9ynao93j-erw9l3u2r3.gz

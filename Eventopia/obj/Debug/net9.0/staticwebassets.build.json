@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/ZwmCo21FzheLc7VTxXYwEIqZ39EQpS3v4gfC7DQ/Gw=",
+  "Hash": "zedo2zhJcsh/Z79whkSKmYWhfbweq8GkG+GVuUgnXto=",
   "Source": "Eventopia",
   "BasePath": "_content/Eventopia",
   "Mode": "Default",
@@ -143,12 +143,12 @@
       "OriginalItemSpec": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-fr7q2aak1r.gz",
+      "Identity": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-47hxeiifp3.gz",
       "SourceId": "Eventopia",
       "SourceType": "Discovered",
       "ContentRoot": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/Eventopia",
-      "RelativePath": "js/site#[.{fingerprint=fr7q2aak1r}]?.js.gz",
+      "RelativePath": "js/site#[.{fingerprint=47hxeiifp3}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -157,8 +157,8 @@
       "RelatedAsset": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/js/site.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "1d730c5nck",
-      "Integrity": "BQhBAKoXoW17dhLG0X94gHeT/Q3IS9PmOA4Fhs5cEDw=",
+      "Fingerprint": "73fgdnp1ej",
+      "Integrity": "Y2kuzAvMx4gU2JN6mf7EzZ8mhk6Vj7xIpyPH1Gsx3SU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/js/site.js"
@@ -1627,8 +1627,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fr7q2aak1r",
-      "Integrity": "y/Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM=",
+      "Fingerprint": "47hxeiifp3",
+      "Integrity": "UAvoLUjXFUMFXYB+Cm+5hQ4znXBORh245Q58GNBI+BI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
@@ -3218,7 +3218,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3271,7 +3271,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3308,7 +3308,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3355,7 +3355,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3408,7 +3408,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3445,7 +3445,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3492,7 +3492,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3553,7 +3553,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3598,7 +3598,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3653,7 +3653,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3714,7 +3714,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3759,7 +3759,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 19:31:52 GMT"
+          "Value": "Tue, 25 Mar 2025 22:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4744,13 +4744,13 @@
       ]
     },
     {
-      "Route": "js/site.fr7q2aak1r.js",
-      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-fr7q2aak1r.gz",
+      "Route": "js/site.47hxeiifp3.js",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-47hxeiifp3.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.005376344086"
+          "Quality": "0.005405405405"
         }
       ],
       "ResponseHeaders": [
@@ -4760,15 +4760,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "185"
+          "Value": "184"
         },
         {
           "Name": "ETag",
-          "Value": "\"BQhBAKoXoW17dhLG0X94gHeT/Q3IS9PmOA4Fhs5cEDw=\""
+          "Value": "\"Y2kuzAvMx4gU2JN6mf7EzZ8mhk6Vj7xIpyPH1Gsx3SU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 17:32:47 GMT"
+          "Value": "Sat, 15 Mar 2025 17:09:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4788,13 +4788,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"y/Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM=\""
+          "Value": "W/\"UAvoLUjXFUMFXYB+Cm+5hQ4znXBORh245Q58GNBI+BI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fr7q2aak1r"
+          "Value": "47hxeiifp3"
         },
         {
           "Name": "label",
@@ -4802,12 +4802,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-y/Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM="
+          "Value": "sha256-UAvoLUjXFUMFXYB+Cm+5hQ4znXBORh245Q58GNBI+BI="
         }
       ]
     },
     {
-      "Route": "js/site.fr7q2aak1r.js",
+      "Route": "js/site.47hxeiifp3.js",
       "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/js/site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4817,7 +4817,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "227"
+          "Value": "226"
         },
         {
           "Name": "Content-Type",
@@ -4825,11 +4825,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"y/Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM=\""
+          "Value": "\"UAvoLUjXFUMFXYB+Cm+5hQ4znXBORh245Q58GNBI+BI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 17:32:47 GMT"
+          "Value": "Sat, 15 Mar 2025 17:09:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4839,7 +4839,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fr7q2aak1r"
+          "Value": "47hxeiifp3"
         },
         {
           "Name": "label",
@@ -4847,13 +4847,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-y/Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM="
+          "Value": "sha256-UAvoLUjXFUMFXYB+Cm+5hQ4znXBORh245Q58GNBI+BI="
         }
       ]
     },
     {
-      "Route": "js/site.fr7q2aak1r.js.gz",
-      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-fr7q2aak1r.gz",
+      "Route": "js/site.47hxeiifp3.js.gz",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-47hxeiifp3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4862,7 +4862,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "185"
+          "Value": "184"
         },
         {
           "Name": "Content-Type",
@@ -4870,11 +4870,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"BQhBAKoXoW17dhLG0X94gHeT/Q3IS9PmOA4Fhs5cEDw=\""
+          "Value": "\"Y2kuzAvMx4gU2JN6mf7EzZ8mhk6Vj7xIpyPH1Gsx3SU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 17:32:47 GMT"
+          "Value": "Sat, 15 Mar 2025 17:09:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4892,7 +4892,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fr7q2aak1r"
+          "Value": "47hxeiifp3"
         },
         {
           "Name": "label",
@@ -4900,18 +4900,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-BQhBAKoXoW17dhLG0X94gHeT/Q3IS9PmOA4Fhs5cEDw="
+          "Value": "sha256-Y2kuzAvMx4gU2JN6mf7EzZ8mhk6Vj7xIpyPH1Gsx3SU="
         }
       ]
     },
     {
       "Route": "js/site.js",
-      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-fr7q2aak1r.gz",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-47hxeiifp3.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.005376344086"
+          "Quality": "0.005405405405"
         }
       ],
       "ResponseHeaders": [
@@ -4921,15 +4921,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "185"
+          "Value": "184"
         },
         {
           "Name": "ETag",
-          "Value": "\"BQhBAKoXoW17dhLG0X94gHeT/Q3IS9PmOA4Fhs5cEDw=\""
+          "Value": "\"Y2kuzAvMx4gU2JN6mf7EzZ8mhk6Vj7xIpyPH1Gsx3SU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 17:32:47 GMT"
+          "Value": "Sat, 15 Mar 2025 17:09:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4949,13 +4949,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"y/Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM=\""
+          "Value": "W/\"UAvoLUjXFUMFXYB+Cm+5hQ4znXBORh245Q58GNBI+BI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-y/Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM="
+          "Value": "sha256-UAvoLUjXFUMFXYB+Cm+5hQ4znXBORh245Q58GNBI+BI="
         }
       ]
     },
@@ -4970,7 +4970,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "227"
+          "Value": "226"
         },
         {
           "Name": "Content-Type",
@@ -4978,11 +4978,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"y/Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM=\""
+          "Value": "\"UAvoLUjXFUMFXYB+Cm+5hQ4znXBORh245Q58GNBI+BI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 17:32:47 GMT"
+          "Value": "Sat, 15 Mar 2025 17:09:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4992,13 +4992,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-y/Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM="
+          "Value": "sha256-UAvoLUjXFUMFXYB+Cm+5hQ4znXBORh245Q58GNBI+BI="
         }
       ]
     },
     {
       "Route": "js/site.js.gz",
-      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-fr7q2aak1r.gz",
+      "AssetFile": "/home/florin/RiderProjects/Eventopia/Eventopia/obj/Debug/net9.0/compressed/4sug6vk83b-47hxeiifp3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5007,7 +5007,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "185"
+          "Value": "184"
         },
         {
           "Name": "Content-Type",
@@ -5015,11 +5015,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"BQhBAKoXoW17dhLG0X94gHeT/Q3IS9PmOA4Fhs5cEDw=\""
+          "Value": "\"Y2kuzAvMx4gU2JN6mf7EzZ8mhk6Vj7xIpyPH1Gsx3SU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 17:32:47 GMT"
+          "Value": "Sat, 15 Mar 2025 17:09:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5037,7 +5037,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-BQhBAKoXoW17dhLG0X94gHeT/Q3IS9PmOA4Fhs5cEDw="
+          "Value": "sha256-Y2kuzAvMx4gU2JN6mf7EzZ8mhk6Vj7xIpyPH1Gsx3SU="
         }
       ]
     },

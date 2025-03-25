@@ -17,8 +17,8 @@ builder.Services.AddIdentity<Users, IdentityRole>()
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<UserService>();
-
 builder.Services.AddScoped<EventService>();
+builder.Services.AddScoped<TicketService>();
 
 builder.Services.AddAuthorization(options =>
 {

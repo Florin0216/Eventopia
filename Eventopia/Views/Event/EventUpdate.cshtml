@@ -1,24 +1,25 @@
 @model Event
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Update";
     Layout = "_Layout";
 }
 
 <div class="container mt-5">
-    <h1 class="mb-4 text-center">Create a New Event</h1>
-    <form asp-action="EventCreate" method="post" enctype="multipart/form-data">
+    <h1 class="mb-4 text-center">Edit Event</h1>
+    <form asp-action="EventUpdate" method="post">
+        <input type="hidden" name="id" value="@Model.Id" />
         <div class="mb-3">
             <label for="eventName" class="form-label"><b>Event Name</b></label>
-            <input asp-for="Name" type="text" class="form-control form-control-lg" id="eventName" placeholder="Enter event name">
+            <input asp-for="Name" value="@Model.Name" type="text" class="form-control form-control-lg" id="eventName" placeholder="Enter event name">
         </div>
         <div class="mb-3">
             <label for="eventDate" class="form-label"><b>Event Date</b></label>
-            <input type="date" class="form-control form-control-lg" id="eventDate" name="date">
+            <input value="@Model.Date.ToString("yyyy-MM-dd")" type="date" class="form-control form-control-lg" id="eventDate" name="date">
         </div>
         <div class="mb-3">
             <label for="eventTime" class="form-label"><b>Event Date</b></label>
-            <input type="time" class="form-control form-control-lg" id="eventTime" name="time">
+            <input value="@Model.Time.ToString("HH:mm")" type="time" class="form-control form-control-lg" id="eventTime" name="time">
         </div>
         <div class="mb-3">
             <label for="eventDescription" class="form-label"><b>Description</b></label>
@@ -26,10 +27,10 @@
         </div>
         <div class="mb-3">
             <label for="eventImage" class="form-label"><b>Event Image</b></label>
-            <input type="file" class="form-control" id="eventImage">
+            <input asp-for="PhotoPath" type="file" class="form-control" id="eventImage" formenctype = "multipart/form-data">
         </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-secondary">Next: Add tickets</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
         </div>
     </form>
 </div>

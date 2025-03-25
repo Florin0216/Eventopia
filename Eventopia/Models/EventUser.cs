@@ -4,17 +4,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Eventopia.Models;
 
-[Table(name: "TicketUser")]
-public class TicketUser
+[Table("EventUser")]
+public class EventUser
 {
-    [ForeignKey("Ticket")]
-    [Column("ticket_id")]
-    public int ticketId { get; set; }
+    [ForeignKey("Event")]
+    [Column("event_id")]
+    public int EventId { get; set; }
     
     [ForeignKey("Users")]
     [Column("Id")]
     public string userId { get; set; }
     
-    public Ticket Ticket { get; set; }
     public Users User { get; set; }
+    public Event Event { get; set; }
 }

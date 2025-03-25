@@ -1,5 +1,7 @@
 using Eventopia.Data;
 using Eventopia.Models;
+using Eventopia.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eventopia.Controllers;
@@ -7,26 +9,37 @@ namespace Eventopia.Controllers;
 public class TicketController : Controller
 {
     
-    private readonly EventopiaDbContext _context;
+    private readonly TicketService _ticketService;
 
-    public TicketController(EventopiaDbContext context)
+    public TicketController(TicketService ticketService)
     {
-        _context = context;
+        _ticketService = ticketService;
     }
     
     [HttpGet("/createTicket")]
-    public IActionResult TicketCreate()
+    [Authorize(Roles = "Organizer")]
+    public async Task<IActionResult> TicketCreate(int eventId)
     {
+        var tickets = await _ticketService.GetTicketsForEvent(eventId);
+        ViewBag.EventId = eventId;
+        ViewBag.Tickets = tickets;
         return View();
     }
 
     [HttpPost("/createTicket")]
-    public async Task<IActionResult> TicketCreate(Ticket ticket)
+    public async Task<IActionResult> TicketCreate(Ticket ticket,int eventId, string action)
     {
         if (ModelState.IsValid)
         {
-            await _context.Tickets.AddAsync(ticket);
-            return Redirect("/createEvent");
+            
+            await _ticketService.CreateTickets(ticket, eventId);
+            switch (action)
+            {
+                case "AddAnotherTicket":
+                    return RedirectToAction("TicketCreate", new { eventId = eventId });
+                case "Finish":
+                    return RedirectToAction("OrganizerDash", "User");
+            }
         }
         return View(ticket);
     }
