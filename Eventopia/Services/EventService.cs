@@ -1,25 +1,27 @@
 using Eventopia.Data;
 using Eventopia.Models;
+using Eventopia.Repositories.Interfaces;
+using Eventopia.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace Eventopia.Services;
 
-public class EventService
+public class EventService : IEventService
 {
-    private readonly EventopiaDbContext _context;
+    private IRepositoryWrapper _repositoryWrapper;
 
-    public EventService(EventopiaDbContext context)
+    public EventService(IRepositoryWrapper repositoryWrapper)
     {
-        _context = context;
+        _repositoryWrapper = repositoryWrapper;
     }
     
-    public async Task<int> Create(Event model, string date, string time, string userId)
+    public async Task<int> CreateEvent(Event model, string date, string time, string userId)
     {
         model.Date = DateOnly.Parse(date);
         model.Time = TimeOnly.Parse(time);
         
-        _context.Events.Add(model);
-        await _context.SaveChangesAsync();
+        _repositoryWrapper.Event.Create(model);
+        await _repositoryWrapper.SaveAsync();
 
         var eventUser = new EventUser
         {
@@ -27,15 +29,15 @@ public class EventService
             EventId = model.Id
         };
         
-        _context.EventUsers.Add(eventUser);
-        await _context.SaveChangesAsync();
+        _repositoryWrapper.EventUser.Create(eventUser);
+        await _repositoryWrapper.SaveAsync();
         
         return model.Id;
     }
 
-    public async Task Update(int id, Event model,string date, string time)
+    public async Task UpdateEvent(int id, Event model,string date, string time)
     {
-        var oldEvent = await _context.Events.FindAsync(id);
+        var oldEvent = await _repositoryWrapper.Event.GetByIdAsync(id);
         if (oldEvent != null)
         {
             oldEvent.Date = DateOnly.Parse(date);
@@ -43,35 +45,42 @@ public class EventService
             oldEvent.Name = model.Name;
             oldEvent.Description = model.Description;
             oldEvent.PhotoPath = model.PhotoPath;
-            await _context.SaveChangesAsync();
+            await _repositoryWrapper.SaveAsync();
         }
     }
     
-    public async Task Delete(Event eventItem)
+    public async Task DeleteEvent(Event? eventItem)
     { 
-        var tickets = _context.Tickets.Where(x => x.EventId == eventItem.Id).ToList();
-        _context.Tickets.RemoveRange(tickets);
-        _context.Events.Remove(eventItem);
+        var tickets = await _repositoryWrapper.Ticket
+            .FindByCondition(x => x.EventId == eventItem.Id)
+            .ToListAsync();
+            
+        foreach (var ticket in tickets)
+        {
+            _repositoryWrapper.Ticket.Delete(ticket);
+        }
         
-        await _context.SaveChangesAsync();
+        _repositoryWrapper.Event.Delete(eventItem);
+        
+        await _repositoryWrapper.SaveAsync();
     }
 
-    public async Task<List<Event>> GetAllEvents()
+    public async Task<IEnumerable<Event>> GetAllEvents()
     {
-        return await _context.Events.ToListAsync();
+        return await _repositoryWrapper.Event.FindAll().ToListAsync();
     }
     
     public async Task<List<Event>> GetEventsByOrganizer(string organizerId)
     {
-        return await _context.Events
-            .Where(e => _context.EventUsers.Any(eu => eu.EventId == e.Id && eu.userId == organizerId))
+        return await _repositoryWrapper.Event.FindAll()
+            .Where(e => _repositoryWrapper.EventUser.FindAll()
+                .Any(eu => eu.EventId == e.Id && eu.userId == organizerId))
             .ToListAsync();
     }
 
-    public async Task<Event> GetEventById(int id)
+    public async Task<Event?> GetEventById(int id)
     {
-        return await _context.Events.FindAsync(id);
+        return await _repositoryWrapper.Event.GetByIdAsync(id);
     }
-    
     
 }

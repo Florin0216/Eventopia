@@ -1,4 +1,4 @@
-@model List<Eventopia.Models.Event>
+@model IEnumerable<Eventopia.Models.Event>
 
 @{
     ViewData["Title"] = "Events";
@@ -16,47 +16,54 @@
             </div>
         </div>
     </div>
-    <div class="row mb-4">
-        <div class="col-md-8 mx-auto">
-            <div class="d-flex gap-3">
-                <select class="form-select">
-                    <option value="all">All Categories</option>
-                    <option value="concert">Concerts</option>
-                    <option value="sports">Sports</option>
-                    <option value="theater">Theater</option>
-                </select>
-                <select class="form-select">
-                    <option value="all">All Dates</option>
-                    <option value="today">Today</option>
-                    <option value="this-week">This Week</option>
-                    <option value="this-month">This Month</option>
-                </select>
-                <select class="form-select">
-                    <option value="all">All Locations</option>
-                    <option value="new-york">New York</option>
-                    <option value="los-angeles">Los Angeles</option>
-                    <option value="london">London</option>
-                </select>
+    
+    <form method="get" asp-action="EventListing">
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <div class="d-flex gap-3">
+                    <select class="form-select" name="category" onchange="this.form.submit()">
+                        <option value="all">All Categories</option>
+                        @foreach (var category in ViewBag.Categories)
+                        {
+                            <option value="@category.Name" 
+                                    selected="@(category.Name == ViewBag.SelectedCategory)">
+                                @category.Name
+                            </option>
+                        }
+                    </select>
+                    <select class="form-select" name="date" onchange="this.form.submit()">
+                        <option value="all">All Dates</option>
+                        <option value="today">Today</option>
+                        <option value="this-week">This Week</option>
+                        <option value="this-month">This Month</option>
+                    </select>
+                    <select class="form-select" name="location" onchange="this.form.submit()">
+                        <option value="all">All Locations</option>
+                        <option value="new-york">New York</option>
+                        <option value="los-angeles">Los Angeles</option>
+                        <option value="london">London</option>
+                    </select>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 
     <div class="event-list">
-        @foreach (var eEvent in Model)
-        {
-            <div class="event-item d-flex align-items-center justify-content-between p-3 border rounded-4 shadow-sm mt-3">
-                <div class="event-date text-center ps-2 pe-3">
-                    <h5 class="mb-0 fw-bold">@eEvent.Date.ToString("MMM dd")</h5>
-                    <span class="text-muted">@eEvent.Time.ToString("h:mm tt")</span>
+            @foreach (var eEvent in Model)
+            {
+                <div class="event-item d-flex align-items-center justify-content-between p-3 border rounded-4 shadow-sm mt-3">
+                    <div class="event-date text-center ps-2 pe-3">
+                        <h5 class="mb-0 fw-bold">@eEvent.Date.ToString("MMM dd")</h5>
+                        <span class="text-muted">@eEvent.Time.ToString("h:mm tt")</span>
+                    </div>
+                    <div class="event-content flex-grow-1 border-start ps-3">
+                        <h5 class="fw-bold">@eEvent.Name</h5>
+                        <p class="fw-bold mb-0">Price: $50 - $200</p>
+                    </div>
+                    <div>
+                        <a asp-controller="Event" asp-action="EventDetails" asp-route-id="@eEvent.Id" class="btn btn-primary">View Tickets</a>
+                    </div>
                 </div>
-                <div class="event-content flex-grow-1 border-start ps-3">
-                    <h5 class="fw-bold">@eEvent.Name</h5>
-                    <p class="fw-bold mb-0">Price: $50 - $200</p>
-                </div>
-                <div>
-                    <a asp-controller="Event" asp-action="EventDetails" asp-route-id="@eEvent.Id" class="btn btn-primary">View Tickets</a>
-                </div>
-            </div>
-        }
+            }
     </div>
 </div>

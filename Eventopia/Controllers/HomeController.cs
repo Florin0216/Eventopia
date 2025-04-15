@@ -32,13 +32,11 @@ public class HomeController : Controller
     [HttpPost]
     public async Task<IActionResult> Login(Users user)
     {
-        if (ModelState.IsValid)
+        if (!ModelState.IsValid) return View(user);
+        var result = await _userService.Login(user.UserName, user.PasswordHash, false, false);
+        if (result.Succeeded)
         {
-            var result = await _userService.Login(user.UserName, user.PasswordHash, false, false);
-            if (result.Succeeded)
-            {
-                return Redirect("/events");
-            }
+            return Redirect("/events");
         }
 
         return View(user);
@@ -56,20 +54,18 @@ public class HomeController : Controller
     [Route("/register")]
     public async Task<IActionResult> SignUp(Users user, string? Role)
     {
-        if (ModelState.IsValid)
+        if (!ModelState.IsValid) return View(user);
+        var roles = new List<string> { "User" };
+            
+        if (!string.IsNullOrEmpty(Role))
         {
-            var roles = new List<string> { "User" };
+            roles.Add("Organizer");
+        }
+        var result = await _userService.Register(user,user.PasswordHash, roles);
             
-            if (!string.IsNullOrEmpty(Role))
-            {
-                roles.Add("Organizer");
-            }
-            var result = await _userService.Register(user,user.PasswordHash, roles);
-            
-            if (result.Succeeded)
-            {
-                return Redirect("/login");
-            }
+        if (result.Succeeded)
+        {
+            return Redirect("/login");
         }
 
         return View(user);

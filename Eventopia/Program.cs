@@ -1,24 +1,36 @@
 using Eventopia.Data;
 using Eventopia.Models;
+using Eventopia.Repositories;
+using Eventopia.Repositories.Interfaces;
 using Eventopia.Services;
+using Eventopia.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<EventopiaDbContext>(options =>
+builder.Services.AddDbContext<RepositoryContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddIdentity<Users, IdentityRole>()
-    .AddEntityFrameworkStores<EventopiaDbContext>()
+    .AddEntityFrameworkStores<RepositoryContext>()
     .AddDefaultTokenProviders();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<UserService>();
-builder.Services.AddScoped<EventService>();
-builder.Services.AddScoped<TicketService>();
+
+builder.Services.AddScoped<IEventRepository, EventRepository>();
+builder.Services.AddScoped<IEventService, EventService>();
+
+builder.Services.AddScoped<ITicketRepository, TicketRepository>();
+builder.Services.AddScoped<ITicketService, TicketService>();
+
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
 
 builder.Services.AddAuthorization(options =>
 {

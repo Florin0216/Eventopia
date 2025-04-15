@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using Eventopia.Services;
+using Eventopia.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,9 +9,9 @@ namespace Eventopia.Controllers;
 public class UserController : Controller
 {
     private readonly IHttpContextAccessor _httpContextAccessor;
-    private readonly EventService _eventService;
+    private readonly IEventService _eventService;
 
-    public UserController(IHttpContextAccessor httpContextAccessor, EventService eventService)
+    public UserController(IHttpContextAccessor httpContextAccessor, IEventService eventService)
     {
         _httpContextAccessor = httpContextAccessor;
         _eventService = eventService;

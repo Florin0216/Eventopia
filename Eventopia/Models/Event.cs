@@ -45,6 +45,6 @@ public class Event
     
     public Category? Category { get; set; }
     
-    public ICollection<TicketUser>? TicketUsers { get; set; }
+    public ICollection<Ticket>? Tickets { get; set; }
     
 }

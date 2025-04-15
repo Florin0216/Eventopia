@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Eventopia.Data;
 
-public class EventopiaDbContext : IdentityDbContext<Users>
+public class RepositoryContext : IdentityDbContext<Users>
 {
-    public EventopiaDbContext(DbContextOptions<EventopiaDbContext> options)
+    public RepositoryContext(DbContextOptions<RepositoryContext> options)
     : base(options)
     {
     }

@@ -1,31 +1,32 @@
 using Eventopia.Data;
 using Eventopia.Models;
+using Eventopia.Repositories.Interfaces;
+using Eventopia.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Eventopia.Services;
 
-public class TicketService
+public class TicketService : ITicketService
 {
-    private readonly EventopiaDbContext _context;
+    private readonly IRepositoryWrapper _repositoryWrapper;
 
-    public TicketService(EventopiaDbContext context)
+    public TicketService(IRepositoryWrapper repositoryWrapper)
     {
-        _context = context;
+        _repositoryWrapper = repositoryWrapper;
     }
 
-    public async Task CreateTickets(Ticket ticket, int eventId)
+    public async Task Create(Ticket ticket, int eventId)
     {
         ticket.EventId = eventId;
-        _context.Tickets.Add(ticket);
-        await _context.SaveChangesAsync();
+        _repositoryWrapper.Ticket.Create(ticket);
+        await _repositoryWrapper.SaveAsync();
 
     }
 
     public async Task<List<Ticket>> GetTicketsForEvent(int eventId)
     {
-        return await _context.Tickets
-            .Where(t => t.EventId == eventId) 
+        return await _repositoryWrapper.Ticket.FindByCondition(e => e.EventId == eventId)
             .ToListAsync();
     }
 }

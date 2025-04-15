@@ -1,5 +1,4 @@
 @model Event
-
 @{
     ViewData["Title"] = "Create";
     Layout = "_Layout";
@@ -17,7 +16,17 @@
             <input type="date" class="form-control form-control-lg" id="eventDate" name="date">
         </div>
         <div class="mb-3">
-            <label for="eventTime" class="form-label"><b>Event Date</b></label>
+            <label for="eventCategory" class="form-label"><b>Category</b></label>
+            <select asp-for="CategoryId" class="form-control form-control-lg" id="eventCategory">
+                <option value="">-- Select Category --</option>
+                @foreach (var category in ViewBag.Categories)
+                {
+                    <option value="@category.Id">@category.Name</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="eventTime" class="form-label"><b>Event Time</b></label>
             <input type="time" class="form-control form-control-lg" id="eventTime" name="time">
         </div>
         <div class="mb-3">

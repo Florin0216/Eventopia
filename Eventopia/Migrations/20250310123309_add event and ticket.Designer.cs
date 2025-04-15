@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Eventopia.Migrations
 {
-    [DbContext(typeof(EventopiaDbContext))]
+    [DbContext(typeof(RepositoryContext))]
     [Migration("20250310123309_add event and ticket")]
     partial class addeventandticket
     {

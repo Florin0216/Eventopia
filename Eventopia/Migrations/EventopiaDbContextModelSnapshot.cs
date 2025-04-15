@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Eventopia.Migrations
 {
-    [DbContext(typeof(EventopiaDbContext))]
+    [DbContext(typeof(RepositoryContext))]
     partial class EventopiaDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

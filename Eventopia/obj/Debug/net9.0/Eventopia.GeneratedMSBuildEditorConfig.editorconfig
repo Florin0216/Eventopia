@@ -28,6 +28,10 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[/home/florin/RiderProjects/Eventopia/Eventopia/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcnkvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/florin/RiderProjects/Eventopia/Eventopia/Views/Event/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXZlbnQvQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
