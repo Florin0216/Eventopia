@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims
+@using Eventopia.Services.Interfaces
+@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -29,9 +32,9 @@
                                 Concerts
                             </a>
                             <ul class="dropdown-menu">
-                                <li><button class="dropdown-item" type="button">Action</button></li>
-                                <li><button class="dropdown-item" type="button">Another action</button></li>
-                                <li><button class="dropdown-item" type="button">Something else here</button></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="Metallica" class="dropdown-item" type="button">Metallica</a></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="The Beatles" class="dropdown-item" type="button">The Beatles</a></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="AC/DC" class="dropdown-item" type="button">AC/DC</a></li>
                             </ul>
                         </div>
                     </li>
@@ -41,9 +44,9 @@
                                 Sports
                             </a>
                             <ul class="dropdown-menu">
-                                <li><button class="dropdown-item" type="button">Action</button></li>
-                                <li><button class="dropdown-item" type="button">Another action</button></li>
-                                <li><button class="dropdown-item" type="button">Something else here</button></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="Soccer" class="dropdown-item" type="button">Soccer</a></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="Tennis" class="dropdown-item" type="button">Tennis</a></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="Basketball" class="dropdown-item" type="button">Basketball</a></li>
                             </ul>
                         </div>
                     </li>
@@ -53,9 +56,9 @@
                                 Theater
                             </a>
                             <ul class="dropdown-menu">
-                                <li><button class="dropdown-item" type="button">Action</button></li>
-                                <li><button class="dropdown-item" type="button">Another action</button></li>
-                                <li><button class="dropdown-item" type="button">Something else here</button></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="Hamlet" class="dropdown-item" type="button">Hamlet</a></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="Waiting for Godot" class="dropdown-item" type="button">Waiting for Godot</a></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="Romeo and Juliet" class="dropdown-item" type="button">Romeo and Juliet</a></li>
                             </ul>
                         </div>
                     </li>
@@ -65,9 +68,9 @@
                                 Festivals
                             </a>
                             <ul class="dropdown-menu">
-                                <li><button class="dropdown-item" type="button">Action</button></li>
-                                <li><button class="dropdown-item" type="button">Another action</button></li>
-                                <li><button class="dropdown-item" type="button">Something else here</button></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="Untold"class="dropdown-item" type="button">Untold</a></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="Beach Please" class="dropdown-item" type="button">Beach Please</a></li>
+                                <li><a asp-controller="Event" asp-action="EventListing" asp-route-search="IntenCity" class="dropdown-item" type="button">IntenCity</a></li>
                             </ul>
                         </div>
                     </li>
@@ -88,9 +91,23 @@
                             </li>
                         }
                         <li class="nav-item">
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
                                 <a class="nav-link text-dark" asp-controller="Home" asp-action="Logout">Logout</a>
-                                <img class="rounded-5 profile-icon" src="~/Images/user.png" alt="profile"/>
+                                @{
+                                    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                                    var userService = Context.RequestServices.GetRequiredService<IUserService>();
+                                    var userManager = Context.RequestServices.GetRequiredService<UserManager<Users>>();
+                                    var user = await userManager.FindByIdAsync(userId);
+                                    var profilePicture = !string.IsNullOrEmpty(user?.ProfilePicturePath) 
+                                        ? user.ProfilePicturePath 
+                                        : "~/Images/user.png";
+                                }
+                                <div asp-controller="User" asp-action="Dashboard">
+                                    <img class="rounded-circle profile-icon ms-2" 
+                                         src="@Url.Content(profilePicture)" 
+                                         alt="profile"
+                                         style="width: 32px; height: 32px; object-fit: cover;"/>
+                                </div>
                             </div>
                         </li>
                     }

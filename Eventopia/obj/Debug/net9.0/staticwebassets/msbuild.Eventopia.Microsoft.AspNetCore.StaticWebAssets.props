@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0rnljtgw45</Fingerprint>
-      <Integrity>hA3UU6kVaxy1++YIHXVUMgNPs6UvyOTDKvbZ3ALFJUU=</Integrity>
+      <Fingerprint>k7rdgr8gwj</Fingerprint>
+      <Integrity>AKc7noTOerQEOJhdku2jTkLkjIRB/L6nCDhSjF3neGQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -71,6 +71,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\concert.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\EventImages\189dbdca-cd22-4cc8-bccb-aaf7181f8ced.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Eventopia</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Eventopia</BasePath>
+      <RelativePath>Images/EventImages/189dbdca-cd22-4cc8-bccb-aaf7181f8ced.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>thwxbf3ksi</Fingerprint>
+      <Integrity>PyYQd5liWyHAPjOmbelUdLaLU67pbl+M2zk1yh4e8Pk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\EventImages\189dbdca-cd22-4cc8-bccb-aaf7181f8ced.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\image1.webp'))">
       <SourceType>Package</SourceType>
@@ -143,6 +161,96 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\image4.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ProfilePictures\3b06f9bc-442d-41c1-a199-823f79c2a26f.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Eventopia</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Eventopia</BasePath>
+      <RelativePath>Images/ProfilePictures/3b06f9bc-442d-41c1-a199-823f79c2a26f.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>thwxbf3ksi</Fingerprint>
+      <Integrity>PyYQd5liWyHAPjOmbelUdLaLU67pbl+M2zk1yh4e8Pk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ProfilePictures\3b06f9bc-442d-41c1-a199-823f79c2a26f.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ProfilePictures\3fd088f7-7d95-443f-9f91-a801c23b9229.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Eventopia</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Eventopia</BasePath>
+      <RelativePath>Images/ProfilePictures/3fd088f7-7d95-443f-9f91-a801c23b9229.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>kpmf7q78tu</Fingerprint>
+      <Integrity>SGDcyFeq8mqQivXyjK8gVDF/AN5vklCJUuwnKjE54IQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ProfilePictures\3fd088f7-7d95-443f-9f91-a801c23b9229.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ProfilePictures\85378bc3-d520-4474-8413-f206821cd56d.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Eventopia</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Eventopia</BasePath>
+      <RelativePath>Images/ProfilePictures/85378bc3-d520-4474-8413-f206821cd56d.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nx864e03yh</Fingerprint>
+      <Integrity>RVEfDMWY1/rw0eYERYdOTcJNlDIydfNkVWfw1Nttp54=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ProfilePictures\85378bc3-d520-4474-8413-f206821cd56d.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ProfilePictures\a9eaeabf-2afa-4080-97bf-1e495628c100.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Eventopia</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Eventopia</BasePath>
+      <RelativePath>Images/ProfilePictures/a9eaeabf-2afa-4080-97bf-1e495628c100.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nx864e03yh</Fingerprint>
+      <Integrity>RVEfDMWY1/rw0eYERYdOTcJNlDIydfNkVWfw1Nttp54=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ProfilePictures\a9eaeabf-2afa-4080-97bf-1e495628c100.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ProfilePictures\c8523c08-0121-4ff8-b4ec-b2c30073783b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Eventopia</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Eventopia</BasePath>
+      <RelativePath>Images/ProfilePictures/c8523c08-0121-4ff8-b4ec-b2c30073783b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>icfgh415ls</Fingerprint>
+      <Integrity>skJVe2YeXpEm97hGO3bCFVzF29Oc1mjHmR2CBuh3XAI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ProfilePictures\c8523c08-0121-4ff8-b4ec-b2c30073783b.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\soccer.webp'))">
       <SourceType>Package</SourceType>

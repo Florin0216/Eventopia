@@ -32,9 +32,4 @@ public class CategoryService : ICategoryService
             .FindByCondition(e => e.Category != null && e.Category.Name == categoryName) 
             .ToListAsync();
     }
-
-    public async Task<IEnumerable<Category>> getAllCategories()
-    {
-        return await _repositoryWrapper.Category.FindAll().ToListAsync();
-    }
 }

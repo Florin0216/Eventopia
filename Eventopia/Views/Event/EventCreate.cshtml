@@ -26,6 +26,16 @@
             </select>
         </div>
         <div class="mb-3">
+            <label for="eventVenue" class="form-label"><b>Venue</b></label>
+            <select asp-for="VenueId" class="form-control form-control-lg" id="eventVenue">
+                <option value="">-- Select Venue --</option>
+                @foreach (var venue in ViewBag.Venues)
+                {
+                    <option value="@venue.Id">@venue.Name</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
             <label for="eventTime" class="form-label"><b>Event Time</b></label>
             <input type="time" class="form-control form-control-lg" id="eventTime" name="time">
         </div>
@@ -35,7 +45,7 @@
         </div>
         <div class="mb-3">
             <label for="eventImage" class="form-label"><b>Event Image</b></label>
-            <input type="file" class="form-control" id="eventImage">
+            <input asp-for="PhotoPath" type="file" class="form-control" id="eventImage" name="Photo">
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-secondary">Next: Add tickets</button>

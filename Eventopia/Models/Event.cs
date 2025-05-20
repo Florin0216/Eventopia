@@ -33,6 +33,10 @@ public class Event
     [Column(name: "photo_path")]
     public string? PhotoPath { get; set; }
     
+    [Column(name: "status")]
+    [StringLength(100)]
+    public string Status { get; set; }
+    
     [ForeignKey("Venue")]
     [Column(name: "venue_id")]
     public int? VenueId { get; set; }
@@ -44,6 +48,12 @@ public class Event
     public int? CategoryId { get; set; }
     
     public Category? Category { get; set; }
+    
+    [ForeignKey("Checkout")]
+    [Column(name: "checkout_id")]
+    public int? CheckoutId { get; set; }
+    
+    public Checkout? Checkout { get; set; }
     
     public ICollection<Ticket>? Tickets { get; set; }
     

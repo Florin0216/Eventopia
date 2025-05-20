@@ -1,5 +1,6 @@
 using Eventopia.Models;
 using Eventopia.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eventopia.Controllers;
@@ -14,12 +15,14 @@ public class CategoryController : Controller
     }
     
     [HttpGet("/category/create")]
+    [Authorize(Roles = "Organizer")]
     public IActionResult Create()
     {
         return View();
     }
 
     [HttpPost("/category/create")]
+    [Authorize(Roles = "Organizer")]
     public async Task<IActionResult> Create(Category category)
     {
 

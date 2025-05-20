@@ -9,6 +9,4 @@ public interface ICategoryService
     Task<IEnumerable<Category>> GetAllCategories();
 
     Task<IEnumerable<Event>> GetEventsByCategoryAsync(string categoryName);
-
-    Task<IEnumerable<Category>> getAllCategories();
 }

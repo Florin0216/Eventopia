@@ -10,4 +10,6 @@ public interface IEventService
     Task<Event?> GetEventById(int id);
     Task<IEnumerable<Event>> GetAllEvents();
     Task<List<Event>> GetEventsByOrganizer(string organizerId);
+    Task<IEnumerable<Event>> FilterEventsByDateAsync(IEnumerable<Event> events, string dateFilter);
+    Task<Dictionary<int, (decimal MinPrice, decimal MaxPrice)>> GetEventsPriceRangesAsync(IEnumerable<Event> events);
 }

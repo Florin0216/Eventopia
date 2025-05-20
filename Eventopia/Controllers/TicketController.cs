@@ -28,6 +28,7 @@ public class TicketController : Controller
     }
 
     [HttpPost("/createTicket")]
+    [Authorize(Roles = "Organizer")]
     public async Task<IActionResult> TicketCreate(Ticket ticket,int eventId, string action)
     {
         if (!ModelState.IsValid) return View(ticket);

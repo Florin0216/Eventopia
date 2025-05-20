@@ -19,6 +19,7 @@ public class EventService : IEventService
     {
         model.Date = DateOnly.Parse(date);
         model.Time = TimeOnly.Parse(time);
+        model.Status = "Upcoming";
         
         _repositoryWrapper.Event.Create(model);
         await _repositoryWrapper.SaveAsync();
@@ -80,7 +81,63 @@ public class EventService : IEventService
 
     public async Task<Event?> GetEventById(int id)
     {
-        return await _repositoryWrapper.Event.GetByIdAsync(id);
+        return await _repositoryWrapper.Event
+            .FindByCondition(e => e.Id == id)
+            .Include(e => e.Venue)
+            .Include(e => e.Tickets)
+            .FirstOrDefaultAsync();
+    }
+    
+    public Task<IEnumerable<Event>> FilterEventsByDateAsync(IEnumerable<Event> events, string dateFilter)
+    {
+        var today = DateOnly.FromDateTime(DateTime.Today);
+        IEnumerable<Event> filteredEvents;
+
+        switch (dateFilter.ToLower())
+        {
+            case "today":
+                filteredEvents = events.Where(e => e.Date == today).ToList();
+                break;
+                
+            case "this-week":
+                var startOfWeek = today.AddDays(-(int)today.DayOfWeek);
+                var endOfWeek = startOfWeek.AddDays(6);
+                filteredEvents = events.Where(e => e.Date >= startOfWeek && e.Date <= endOfWeek).ToList();
+                break;
+                
+            case "this-month":
+                var startOfMonth = new DateOnly(today.Year, today.Month, 1);
+                var endOfMonth = startOfMonth.AddMonths(1).AddDays(-1);
+                filteredEvents = events.Where(e => e.Date >= startOfMonth && e.Date <= endOfMonth).ToList();
+                break;
+                
+            default:
+                filteredEvents = events;
+                break;
+        }
+
+        return Task.FromResult(filteredEvents);
+    }
+    
+    public async Task<Dictionary<int, (decimal MinPrice, decimal MaxPrice)>> GetEventsPriceRangesAsync(IEnumerable<Event> events)
+    {
+        var eventIds = events.Select(e => e.Id).ToList();
+
+        var tickets = await _repositoryWrapper.Ticket
+            .FindByCondition(t => t.EventId.HasValue && eventIds.Contains(t.EventId.Value))
+            .ToListAsync();
+
+        var priceRanges = tickets
+            .GroupBy(t => t.EventId.Value) 
+            .ToDictionary(
+                g => g.Key,
+                g => (
+                    MinPrice: g.Min(t => t.Price),
+                    MaxPrice: g.Max(t => t.Price)
+                )
+            );
+
+        return priceRanges;
     }
     
 }

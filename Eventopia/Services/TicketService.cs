@@ -29,4 +29,16 @@ public class TicketService : ITicketService
         return await _repositoryWrapper.Ticket.FindByCondition(e => e.EventId == eventId)
             .ToListAsync();
     }
+
+    public IQueryable<Ticket> GetTicketByType(string ticketType)
+    {
+        return _repositoryWrapper.Ticket.FindByCondition(t => t.Type == ticketType);
+    }
+    
+    public async Task UpdateTicket(Ticket ticket)
+    {
+        _repositoryWrapper.Ticket.Update(ticket);
+        await _repositoryWrapper.SaveAsync();
+    }
+
 }

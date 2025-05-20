@@ -56,25 +56,25 @@
 <div class="container text-center mt-4">
   <div class="d-flex justify-content-around">
     <div class="d-flex flex-column align-items-center">
-      <button type="button" class="btn custom-btn rounded-circle btn-lg">
+      <a asp-controller="Event" asp-action="EventListing" asp-route-category="music" class="btn custom-btn rounded-circle btn-lg">
         <i class="bi bi-music-note-beamed"></i>
-      </button>
+      </a>
       <span class="mt-2 btn-label">Music</span>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <button type="button" class="btn custom-btn rounded-circle btn-lg"><i class="fa-solid fa-medal"></i></button>
+      <a asp-controller="Event" asp-action="EventListing" asp-route-category="sports" class="btn custom-btn rounded-circle btn-lg"><i class="fa-solid fa-medal"></i></a>
       <span class="mt-2 btn-label">Sports</span>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <button type="button" class="btn custom-btn rounded-circle btn-lg"><i class="bi bi-pc-display"></i></button>
+      <a asp-controller="Event" asp-action="EventListing" asp-route-category="tech" class="btn custom-btn rounded-circle btn-lg"><i class="bi bi-pc-display"></i></a>
       <span class="mt-2 btn-label">Tech</span>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <button type="button" class="btn custom-btn rounded-circle btn-lg"><i class="fa-solid fa-utensils"></i></button>
+      <a asp-controller="Event" asp-action="EventListing" asp-route-category="food" class="btn custom-btn rounded-circle btn-lg"><i class="fa-solid fa-utensils"></i></a>
       <span class="mt-2 btn-label">Food</span>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <button type="button" class="btn custom-btn rounded-circle btn-lg"><i class="bi bi-brush"></i></button>
+      <a asp-controller="Event" asp-action="EventListing" asp-route-category="art" class="btn custom-btn rounded-circle btn-lg"><i class="bi bi-brush"></i></a>
       <span class="mt-2 btn-label">Art</span>
     </div>
   </div>
@@ -113,16 +113,11 @@
 <section class="p-4 bg-light text-center">
   <div class="container">
     <h2>Stay Updated!</h2>
-    <p class="mb-4">Subscribe to our newsletter to receive the latest event updates and exclusive offers.</p>
-    <form class="d-flex justify-content-center">
-      <input type="email" class="form-control w-50" placeholder="Enter your email" required>
-      <button type="submit" class="btn btn-primary ms-2">Subscribe</button>
-    </form>
     <div class="mt-4">
       <h5>Follow us on social media</h5>
-      <a href="#" class="btn btn-outline-dark mx-1"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="btn btn-outline-dark mx-1"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="btn btn-outline-dark mx-1"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.facebook.com/" class="btn btn-outline-dark mx-1"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/" class="btn btn-outline-dark mx-1"><i class="bi bi-instagram"></i></a>
+      <a href="https://x.com/" class="btn btn-outline-dark mx-1"><i class="bi bi-twitter-x"></i></a>
     </div>
   </div>
 </section>

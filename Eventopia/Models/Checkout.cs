@@ -15,23 +15,32 @@ public class Checkout
     [DataType(DataType.Date)]
     public DateTime CheckoutDate { get; set; }
     
-    [Column(name: "currency")]
-    [StringLength(10)]
-    public string Currency { get; set; }
+    [Column(name: "location")]
+    [StringLength(100)]
+    public string Location { get; set; }
+    
+    [Column(name: "type")]
+    [StringLength(100)]
+    public string Type { get; set; }
     
     [Column(name: "amount")]
-    public float Amount { get; set; }
+    public decimal Amount { get; set; }
     
-    [Column(name: "status")]
-    [StringLength(10)]
-    public string Status { get; set; }
+    [Column(name: "quantity")]
+    public int Quantity { get; set; }
     
     [ForeignKey("Users")]
     [Column(name: "user_id")]
     [Required]
-    public string UserId { get; set; }
+    public string? UserId { get; set; }
     
-    public Users? Users { get; set; }
+    public Users? User { get; set; }
+    
+    [ForeignKey("Event")]
+    [Column(name: "event_id")]
+    public int? EventId { get; set; }
+    
+    public Event? Event { get; set; }
     
     public ICollection<CheckoutTicket>? CheckoutTickets { get; set; }
 }

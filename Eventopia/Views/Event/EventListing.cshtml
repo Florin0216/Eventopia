@@ -9,10 +9,14 @@
     <div class="container box-shadow p-3">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="search-container">
-                    <input type="text" class="form-control search-input" placeholder="Search...">
-                    <i class="fas fa-search search-icon"></i>
-                </div>
+                <form method="get" asp-action="EventListing" asp-controller="Event" class="search-container">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control rounded-start-pill p-3" placeholder="Search..." name="search" @ViewBag.SearchTerm>
+                        <button type="submit" class="btn btn-outline-secondary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -25,23 +29,27 @@
                         <option value="all">All Categories</option>
                         @foreach (var category in ViewBag.Categories)
                         {
-                            <option value="@category.Name" 
+                            <option value="@category.Name"
                                     selected="@(category.Name == ViewBag.SelectedCategory)">
                                 @category.Name
                             </option>
                         }
                     </select>
                     <select class="form-select" name="date" onchange="this.form.submit()">
-                        <option value="all">All Dates</option>
-                        <option value="today">Today</option>
-                        <option value="this-week">This Week</option>
-                        <option value="this-month">This Month</option>
+                        <option value="all" selected="@(ViewBag.SelectedDate == "all")">All Dates</option>
+                        <option value="today" selected="@(ViewBag.SelectedDate == "today")">Today</option>
+                        <option value="this-week" selected="@(ViewBag.SelectedDate == "this-week")">This Week</option>
+                        <option value="this-month" selected="@(ViewBag.SelectedDate == "this-month")">This Month</option>
                     </select>
                     <select class="form-select" name="location" onchange="this.form.submit()">
                         <option value="all">All Locations</option>
-                        <option value="new-york">New York</option>
-                        <option value="los-angeles">Los Angeles</option>
-                        <option value="london">London</option>
+                        @foreach (var venue in ViewBag.Venues)
+                        {
+                            <option value="@venue.Name"
+                                    selected="@(venue.Name == ViewBag.SelectedVenue)">
+                                @venue.Name
+                            </option>
+                        }
                     </select>
                 </div>
             </div>
@@ -49,21 +57,55 @@
     </form>
 
     <div class="event-list">
-            @foreach (var eEvent in Model)
+        @foreach (var eEvent in Model)
+        {
+            var priceRangeDict = ViewBag.PriceRanges as Dictionary<int, (decimal MinPrice, decimal MaxPrice)>;
+
+            (decimal MinPrice, decimal MaxPrice)? priceRange = null;
+            if (priceRangeDict != null && priceRangeDict.ContainsKey(eEvent.Id))
             {
-                <div class="event-item d-flex align-items-center justify-content-between p-3 border rounded-4 shadow-sm mt-3">
-                    <div class="event-date text-center ps-2 pe-3">
-                        <h5 class="mb-0 fw-bold">@eEvent.Date.ToString("MMM dd")</h5>
-                        <span class="text-muted">@eEvent.Time.ToString("h:mm tt")</span>
-                    </div>
-                    <div class="event-content flex-grow-1 border-start ps-3">
-                        <h5 class="fw-bold">@eEvent.Name</h5>
-                        <p class="fw-bold mb-0">Price: $50 - $200</p>
-                    </div>
-                    <div>
-                        <a asp-controller="Event" asp-action="EventDetails" asp-route-id="@eEvent.Id" class="btn btn-primary">View Tickets</a>
-                    </div>
-                </div>
+                priceRange = priceRangeDict[eEvent.Id];
             }
+
+            string priceText;
+            if (priceRange.HasValue)
+            {
+                priceText = priceRange.Value.MinPrice == priceRange.Value.MaxPrice
+                    ? $"{priceRange.Value.MinPrice:C}"
+                    : $"{priceRange.Value.MinPrice:C} - {priceRange.Value.MaxPrice:C}";
+            }
+            else
+            {
+                priceText = "No tickets available";
+            }
+
+
+            <div class="event-item d-flex align-items-center justify-content-between p-3 border rounded-4 shadow-sm mt-3">
+                <div class="event-date text-center ps-2 pe-3">
+                    <h5 class="mb-0 fw-bold">@eEvent.Date.ToString("MMM dd")</h5>
+                    <span class="text-muted">@eEvent.Time.ToString("h:mm tt")</span>
+                </div>
+                <div class="event-content flex-grow-1 border-start ps-3">
+                    <h5 class="fw-bold">@eEvent.Name</h5>
+                    @if (eEvent.Venue != null)
+                    {
+                        <p class="mb-0 text-muted">
+                            <i class="fa-solid fa-location-dot"></i> @eEvent.Venue.City, @eEvent.Venue.Country
+                        </p>
+                    }
+                    else
+                    {
+                        <p class="mb-0 text-muted">
+                            <i class="fa-solid fa-location-dot"></i> Location unavailable
+                        </p>
+                    }
+                    <p class="fw-bold mb-0">Price: @priceText</p>
+                </div>
+                <div>
+                    <a asp-controller="Event" asp-action="EventDetails" asp-route-id="@eEvent.Id" class="btn btn-primary">View Tickets</a>
+                </div>
+            </div>
+        }
+
     </div>
 </div>

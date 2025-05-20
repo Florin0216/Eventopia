@@ -1,15 +1,14 @@
 using Eventopia.Models;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using Eventopia.Services;
+using Eventopia.Services.Interfaces;
 
 namespace Eventopia.Controllers;
 
 public class HomeController : Controller
 {
 
-    private readonly UserService _userService;
+    private readonly IUserService _userService;
     public HomeController(UserService userService)
     {
         _userService = userService;
@@ -55,13 +54,13 @@ public class HomeController : Controller
     public async Task<IActionResult> SignUp(Users user, string? Role)
     {
         if (!ModelState.IsValid) return View(user);
-        var roles = new List<string> { "User" };
-            
-        if (!string.IsNullOrEmpty(Role))
+
+        if (Role == null)
         {
-            roles.Add("Organizer");
+            Role = "User";
         }
-        var result = await _userService.Register(user,user.PasswordHash, roles);
+        
+        var result = await _userService.Register(user,user.PasswordHash, Role);
             
         if (result.Succeeded)
         {

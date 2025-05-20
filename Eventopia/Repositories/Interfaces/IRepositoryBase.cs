@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using Eventopia.Models;
 
 namespace Eventopia.Repositories.Interfaces;
 

@@ -68,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/florin/RiderProjects/Eventopia/Eventopia/Views/Review/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/florin/RiderProjects/Eventopia/Eventopia/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -86,6 +90,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/florin/RiderProjects/Eventopia/Eventopia/Views/User/OrganizerDash.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Pcmdhbml6ZXJEYXNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/florin/RiderProjects/Eventopia/Eventopia/Views/Venue/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVudWUvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/florin/RiderProjects/Eventopia/Eventopia/Views/_ViewImports.cshtml]

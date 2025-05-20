@@ -5,6 +5,30 @@
       "PackagePath": "staticwebassets/Eventopia.wxn78vw8xw.bundle.scp.css"
     },
     {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/EventImages/189dbdca-cd22-4cc8-bccb-aaf7181f8ced.jpg",
+      "PackagePath": "staticwebassets/Images/EventImages/189dbdca-cd22-4cc8-bccb-aaf7181f8ced.jpg"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/ProfilePictures/3b06f9bc-442d-41c1-a199-823f79c2a26f.jpg",
+      "PackagePath": "staticwebassets/Images/ProfilePictures/3b06f9bc-442d-41c1-a199-823f79c2a26f.jpg"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/ProfilePictures/3fd088f7-7d95-443f-9f91-a801c23b9229.jpg",
+      "PackagePath": "staticwebassets/Images/ProfilePictures/3fd088f7-7d95-443f-9f91-a801c23b9229.jpg"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/ProfilePictures/85378bc3-d520-4474-8413-f206821cd56d.jpg",
+      "PackagePath": "staticwebassets/Images/ProfilePictures/85378bc3-d520-4474-8413-f206821cd56d.jpg"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/ProfilePictures/a9eaeabf-2afa-4080-97bf-1e495628c100.jpg",
+      "PackagePath": "staticwebassets/Images/ProfilePictures/a9eaeabf-2afa-4080-97bf-1e495628c100.jpg"
+    },
+    {
+      "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/ProfilePictures/c8523c08-0121-4ff8-b4ec-b2c30073783b.jpg",
+      "PackagePath": "staticwebassets/Images/ProfilePictures/c8523c08-0121-4ff8-b4ec-b2c30073783b.jpg"
+    },
+    {
       "Id": "/home/florin/RiderProjects/Eventopia/Eventopia/wwwroot/Images/concert.webp",
       "PackagePath": "staticwebassets/Images/concert.webp"
     },

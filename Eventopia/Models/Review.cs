@@ -26,14 +26,14 @@ public class Review
     
     [ForeignKey("Event")]
     [Column(name: "event_id")]
-    public int EventId { get; set; }
+    public int? EventId { get; set; }
     
-    public Event Event { get; set; }
+    public Event? Event { get; set; }
     
     [ForeignKey("Users")]
     [Column(name: "user_id")]
     [Required]
-    public string UserId { get; set; }
+    public string? UserId { get; set; }
     
     public Users? User { get; set; }
 }

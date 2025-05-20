@@ -1,0 +1,52 @@
+@model Venue
+
+@{
+    ViewData["Title"] = "Create Venue";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-title text-center p-3">
+                    <h2>Create new venue</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="Create" asp-controller="Venue">
+                        <div class="mb-3">
+                            <label for="venueName" class="form-label">Venue Name</label>
+                            <input asp-for="Name" type="text" class="form-control" id="venueName"
+                                   placeholder="Enter venue name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Venue address</label>
+                            <input asp-for="Address" type="text" class="form-control" id="address"
+                                   placeholder="Enter address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">Venue city</label>
+                            <input asp-for="City" type="text" class="form-control" id="city"
+                                   placeholder="Enter city" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Venue country</label>
+                            <input asp-for="Country" type="text" class="form-control" id="country"
+                                   placeholder="Enter country" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="capacity" class="form-label">Venue capacity</label>
+                            <input asp-for="Capacity" type="number" class="form-control" id="capacity"
+                                   placeholder="Enter capacity" required>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                Create
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

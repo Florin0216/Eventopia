@@ -11,6 +11,11 @@ public class RepositoryWrapper : IRepositoryWrapper
     private ITicketRepository _ticket;
     private IEventUserRepository _eventUser;
     private ICategoryRepository _category;
+    private IUserRepository _user;
+    private IVenueRepository _venue;
+    private ICheckoutRepository _checkout;
+    private ICheckoutTicketRepository _checkoutTicket;
+    private IReviewRepository _review;
     
     public RepositoryWrapper(RepositoryContext repositoryContext)
     {
@@ -23,6 +28,11 @@ public class RepositoryWrapper : IRepositoryWrapper
 
     public IEventUserRepository EventUser => _eventUser ??= new EventUserRepository(_repositoryContext);
     public ICategoryRepository Category => _category ??= new CategoryRepository(_repositoryContext);
+    public IUserRepository User => _user ??= new UserRepository(_repositoryContext);
+    public IVenueRepository Venue => _venue ??= new VenueRepository(_repositoryContext);
+    public ICheckoutRepository Checkout => _checkout ??= new CheckoutRepository(_repositoryContext);
+    public ICheckoutTicketRepository CheckoutTicket => _checkoutTicket ??= new CheckoutTicketRepository(_repositoryContext);
+    public IReviewRepository Review => _review ??= new ReviewRepository(_repositoryContext);
 
     public async Task SaveAsync()
     {

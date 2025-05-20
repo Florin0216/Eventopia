@@ -30,17 +30,25 @@ builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 
+builder.Services.AddScoped<IVenueRepository, VenueRepository>();
+builder.Services.AddScoped<IVenueService, VenueService>();
+
+builder.Services.AddScoped<ICheckoutRepository, CheckoutRepository>();
+builder.Services.AddScoped<ICheckoutService, CheckoutService>();
+
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+
+builder.Services.AddScoped<IUserService, UserService>();
+
 builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
 
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
-    options.AddPolicy("Manager", policy => policy.RequireRole("Organizer"));
-    options.AddPolicy("Member", policy => policy.RequireRole("User"));
+    options.AddPolicy("Organizer", policy => policy.RequireRole("Organizer"));
+    options.AddPolicy("User", policy => policy.RequireRole("User"));
     
-    options.AddPolicy("OnlyForUser", policy => 
-        policy.RequireRole("User").RequireAssertion(context =>
-            !context.User.IsInRole("Organizer")));
 });
 
 var app = builder.Build();

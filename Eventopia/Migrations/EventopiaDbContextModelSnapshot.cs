@@ -56,25 +56,33 @@ namespace Eventopia.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<float>("Amount")
-                        .HasColumnType("real")
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("numeric")
                         .HasColumnName("amount");
 
                     b.Property<DateTime>("CheckoutDate")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("checkout_date");
 
-                    b.Property<string>("Currency")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("character varying(10)")
-                        .HasColumnName("currency");
+                    b.Property<int?>("EventId")
+                        .HasColumnType("integer")
+                        .HasColumnName("event_id");
 
-                    b.Property<string>("Status")
+                    b.Property<string>("Location")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("character varying(10)")
-                        .HasColumnName("status");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("location");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer")
+                        .HasColumnName("quantity");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("type");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -82,6 +90,8 @@ namespace Eventopia.Migrations
                         .HasColumnName("user_id");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EventId");
 
                     b.HasIndex("UserId");
 
@@ -118,6 +128,10 @@ namespace Eventopia.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("category_id");
 
+                    b.Property<int?>("CheckoutId")
+                        .HasColumnType("integer")
+                        .HasColumnName("checkout_id");
+
                     b.Property<DateOnly>("Date")
                         .HasColumnType("date")
                         .HasColumnName("event_date");
@@ -137,6 +151,12 @@ namespace Eventopia.Migrations
                         .HasColumnType("text")
                         .HasColumnName("photo_path");
 
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("status");
+
                     b.Property<TimeOnly>("Time")
                         .HasColumnType("time without time zone")
                         .HasColumnName("event_time");
@@ -148,6 +168,8 @@ namespace Eventopia.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("CheckoutId");
 
                     b.HasIndex("VenueId");
 
@@ -180,7 +202,7 @@ namespace Eventopia.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("EventId")
+                    b.Property<int?>("EventId")
                         .HasColumnType("integer")
                         .HasColumnName("event_id");
 
@@ -264,12 +286,7 @@ namespace Eventopia.Migrations
                         .HasColumnType("text")
                         .HasColumnName("Id");
 
-                    b.Property<int?>("EventId")
-                        .HasColumnType("integer");
-
                     b.HasKey("ticketId", "userId");
-
-                    b.HasIndex("EventId");
 
                     b.HasIndex("userId");
 
@@ -328,6 +345,11 @@ namespace Eventopia.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("boolean");
+
+                    b.Property<string>("ProfilePicturePath")
+                        .HasMaxLength(255)
+                        .HasColumnType("character varying(255)")
+                        .HasColumnName("ProfilePicturePath");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("text");
@@ -501,13 +523,19 @@ namespace Eventopia.Migrations
 
             modelBuilder.Entity("Eventopia.Models.Checkout", b =>
                 {
-                    b.HasOne("Eventopia.Models.Users", "Users")
+                    b.HasOne("Eventopia.Models.Event", "Event")
+                        .WithMany()
+                        .HasForeignKey("EventId");
+
+                    b.HasOne("Eventopia.Models.Users", "User")
                         .WithMany("Checkouts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Users");
+                    b.Navigation("Event");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Eventopia.Models.CheckoutTicket", b =>
@@ -535,11 +563,17 @@ namespace Eventopia.Migrations
                         .WithMany("Events")
                         .HasForeignKey("CategoryId");
 
+                    b.HasOne("Eventopia.Models.Checkout", "Checkout")
+                        .WithMany()
+                        .HasForeignKey("CheckoutId");
+
                     b.HasOne("Eventopia.Models.Venue", "Venue")
                         .WithMany("Events")
                         .HasForeignKey("VenueId");
 
                     b.Navigation("Category");
+
+                    b.Navigation("Checkout");
 
                     b.Navigation("Venue");
                 });
@@ -567,9 +601,7 @@ namespace Eventopia.Migrations
                 {
                     b.HasOne("Eventopia.Models.Event", "Event")
                         .WithMany()
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("EventId");
 
                     b.HasOne("Eventopia.Models.Users", "User")
                         .WithMany("Reviews")
@@ -585,7 +617,7 @@ namespace Eventopia.Migrations
             modelBuilder.Entity("Eventopia.Models.Ticket", b =>
                 {
                     b.HasOne("Eventopia.Models.Event", "Event")
-                        .WithMany()
+                        .WithMany("Tickets")
                         .HasForeignKey("EventId");
 
                     b.Navigation("Event");
@@ -593,10 +625,6 @@ namespace Eventopia.Migrations
 
             modelBuilder.Entity("Eventopia.Models.TicketUser", b =>
                 {
-                    b.HasOne("Eventopia.Models.Event", null)
-                        .WithMany("TicketUsers")
-                        .HasForeignKey("EventId");
-
                     b.HasOne("Eventopia.Models.Ticket", "Ticket")
                         .WithMany("TicketUsers")
                         .HasForeignKey("ticketId")
@@ -626,7 +654,7 @@ namespace Eventopia.Migrations
 
             modelBuilder.Entity("Eventopia.Models.Event", b =>
                 {
-                    b.Navigation("TicketUsers");
+                    b.Navigation("Tickets");
                 });
 
             modelBuilder.Entity("Eventopia.Models.Ticket", b =>

@@ -1,5 +1,6 @@
 using System.Linq.Expressions;
 using Eventopia.Data;
+using Eventopia.Models;
 using Eventopia.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 

@@ -1,3 +1,4 @@
+@model Checkout
 @{
     ViewData["Title"] = "Checkout";
     Layout = "_Layout";
@@ -12,7 +13,7 @@
                     <h2 class="card-title mb-0 text-center">Checkout</h2>
                 </div>
                 <div class="card-body">
-                    <form method="post">
+                    <form method="post" asp-action="Checkout" asp-controller="Event">
                         <div class="mb-3">
                             <input type="text" class="form-control" id="cardNumber" placeholder="CARD NUMBER" required>
                         </div>
@@ -29,18 +30,18 @@
                         </div>
                         <div class="mb-3">
                             <label for="ticketType" class="form-label">Ticket Type</label>
-                            <input type="text" class="form-control" id="ticketType" readonly>
+                            <input asp-for="Type" type="text" class="form-control" id="ticketType" readonly value="@ViewBag.TicketType">
                         </div>
                         <div class="mb-3">
                             <label for="quantity" class="form-label">Quantity</label>
-                            <input type="number" class="form-control" id="quantity" readonly>
+                            <input asp-for="Quantity" type="number" class="form-control" id="quantity" readonly value="@ViewBag.Quantity">
                         </div>
                         <div class="mb-3">
                             <label for="totalAmount" class="form-label">Total Amount</label>
-                            <input type="text" class="form-control" id="totalAmount" readonly>
+                            <input asp-for="Amount" type="number" class="form-control" id="totalAmount" readonly value="@ViewBag.TotalAmount">
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" asp-controller="Event" asp-action="Confirmation" class="btn btn-primary btn-lg">Confirm Purchase</button>
+                            <button type="submit" class="btn btn-primary btn-lg">Confirm Purchase</button>
                         </div>
                     </form>
                 </div>

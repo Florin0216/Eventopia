@@ -5,12 +5,24 @@
     Layout = "_Layout";
 }
 
-<div class="d-flex justify-content-center">
-    <img src="~/Images/user.png" class="profile" alt="profile"/>
-</div>
 <div class="container">
     <div class="row">
         <h1 class="mb-4 text-center">Welcome, Organizer!</h1>
+        <div class="d-flex justify-content-center mb-4">
+            <div class="position-relative">
+                <img src="@Url.Content(ViewBag.ProfilePicture)" class="profile rounded-circle" alt="profile" style="width: 150px; height: 150px; object-fit: cover;"/>
+                <div class="position-absolute bottom-0 end-0">
+                    <form asp-action="UploadProfilePicture" asp-controller="User" enctype="multipart/form-data" method="post">
+                        <div class="form-group mb-0">
+                            <label for="profilePic" class="btn btn-sm btn-primary rounded-circle" style="width: 40px; height: 40px;">
+                                <i class="bi bi-pencil"></i>
+                            </label>
+                            <input type="file" name="profilePic" id="profilePic" class="d-none" onchange="this.form.submit()" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="col-md-12 mb-4">
             <div class="card shadow-sm">
                 <div class="card-body">
@@ -19,19 +31,19 @@
                         <div class="col-md-4">
                             <div class="card shadow-sm p-3">
                                 <h5>Total Tickets Sold</h5>
-                                <p class="display-6 fw-bold text-primary">350</p>
+                                <p class="display-6 fw-bold text-primary">@ViewBag.TotalTicketsSold</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card shadow-sm p-3">
                                 <h5>Total Revenue</h5>
-                                <p class="display-6 fw-bold text-success">€15,000</p>
+                                <p class="display-6 fw-bold text-success">@ViewBag.TotalRevenue</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card shadow-sm p-3">
                                 <h5>Active Events</h5>
-                                <p class="display-6 fw-bold text-warning">2</p>
+                                <p class="display-6 fw-bold text-warning">@ViewBag.ActiveEvents</p>
                             </div>
                         </div>
                     </div>
@@ -57,7 +69,7 @@
                                 <div class="d-flex justify-content-between align-items-start">
                                     <div class="ms-2 me-auto">
                                         <h5 class="fw-bold">@eventItem.Name</h5>
-                                        <small class="text-success">100 Tickets Sold</small>
+                                        <small class="text-success">@ViewBag.TicketsSoldPerEvent[eventItem.Id] Tickets Sold</small>
                                     </div>
                                     <div class="text-end">
                                         <span class="badge bg-primary rounded-pill mb-2">@eventItem.Date.ToString("dd MMM yyyy")</span>
